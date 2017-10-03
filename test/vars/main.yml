@@ -1,0 +1,29 @@
+###############################
+#### Modules Variables     ####
+###############################
+#### Role Common
+common_packages_update: yes
+
+#### EC2 Instance Spec
+ec2_os: centos7
+ec2_instance_type: t2.medium
+ec2_security_group: toolbox-test
+ec2_key_name: toolbox-test
+ec2_key_dir: files
+ec2_exact_count: 1
+ec2_boot_disk_volume_size: 30
+
+ec2_instance_tags:
+  Name: toolbox-test
+  Class: web
+  Version: static
+  Environment: staging
+
+ec2_security_ports:
+  - 22
+  - 80
+  - 443
+
+#### Role Gitlab
+gitlab_create_self_signed_cert: "false"
+gitlab_redirect_http_to_https: "false"

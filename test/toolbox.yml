@@ -1,0 +1,11 @@
+---
+- name: Toolbox Setup
+  hosts: all
+  gather_facts: True
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - { role: victorock.common }
+    - { role: victorock.security }
+    - { role: victorock.gitlab }
