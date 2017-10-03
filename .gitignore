@@ -1,8 +1,6 @@
 # Ansible
 *.retry
-files/*
-roles/*
-!roles/requirements.yml
+test/roles/*
 
 # Vagrant
 .vagrant
