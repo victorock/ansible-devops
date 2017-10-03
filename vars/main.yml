@@ -25,5 +25,6 @@ ec2_security_ports:
   - 443
 
 #### Role Gitlab
+gitlab_external_url: "http://0.0.0.0/"
 gitlab_create_self_signed_cert: "false"
 gitlab_redirect_http_to_https: "false"
