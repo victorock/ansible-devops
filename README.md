@@ -1,15 +1,12 @@
 # Ansible Demo
 
-## Toolbox Application
+## DevOps - Developper Operations Playbooks
 
-Installs:
+Repository of playbooks maintained by Developper with Operations.
+
+Installs the toolbox:
 
 - GitLab
 - FreeIPA
-
-GitLab's default administrator :
-
-    root
-    5iveL!fe
 
 **NOTE: Using Cento7 as Gitlab package for Fedora doesn't exists yet**
