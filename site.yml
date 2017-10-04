@@ -1,2 +1,3 @@
-- include: cloud.yml
-- include: toolbox.yml
+- include: gitlab.yml
+# Future
+#- include: freeipa.yml

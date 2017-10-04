@@ -1,9 +1,0 @@
----
-- name: Toolbox Create Cloud Node
-  hosts: localhost
-  become: no
-  gather_facts: no
-  vars_files:
-    - vars/main.yml
-  roles:
-    - { role: victorock.aws-cloud }

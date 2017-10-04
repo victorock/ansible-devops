@@ -5,21 +5,23 @@
 common_packages_update: yes
 
 #### EC2 Instance Spec
-ec2_os: centos7
-ec2_instance_type: t2.medium
-ec2_security_group: toolbox
-ec2_key_name: toolbox
-ec2_key_dir: files
-ec2_exact_count: 1
-ec2_boot_disk_volume_size: 30
+ec2_region: eu-central-1
 
-ec2_instance_tags:
+## Instance
+ec2cloud_os: centos7
+ec2cloud_instance_type: t2.medium
+ec2cloud_exact_count: 1
+ec2cloud_boot_disk_volume_size: 30
+ec2cloud_instance_tags:
   Name: toolbox
   Class: web
-  Version: static
-  Environment: staging
+  Version: 0.1a
+  Environment: dev
 
-ec2_security_ports:
+## Security
+ec2security_group_name: toolbox
+ec2security_source: 0.0.0.0/0
+ec2security_ports:
   - 22
   - 80
   - 443
