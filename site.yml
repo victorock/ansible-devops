@@ -1,4 +1,4 @@
-- import_playbook: aws.yml
-- import_playbook: gitlab.yml
+- include: aws.yml
+- include: gitlab.yml
 # Future
 #- import_playbook: freeipa.yml
