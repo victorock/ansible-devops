@@ -1,8 +1,8 @@
 ---
 - name: Toolbox Cloud Setup
-  hosts: all
-  gather_facts: True
-  become: yes
+  hosts: localhost
+  gather_facts: False
+  become: False
 
   vars_files:
     - vars/main.yml
