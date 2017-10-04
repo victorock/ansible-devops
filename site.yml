@@ -1,3 +1,4 @@
+- include: cloud.yml
 - include: gitlab.yml
 # Future
 #- include: freeipa.yml

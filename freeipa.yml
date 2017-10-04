@@ -1,5 +1,5 @@
 ---
-- name: Toolbox Setup
+- name: Toolbox FreeIPA Setup
   hosts: all
   gather_facts: True
   become: yes
