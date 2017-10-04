@@ -1,4 +1,6 @@
 - import_playbook: aws.yml
 - import_playbook: gitlab.yml
+  when:
+    - ec2cloud_exact_count|int > 0
 # Future
 #- import_playbook: freeipa.yml
