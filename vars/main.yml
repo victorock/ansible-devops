@@ -25,6 +25,7 @@ ec2security_ports:
   - 22
   - 80
   - 443
+  - 9418
 
 #### Role Gitlab
 gitlab_external_url: "http://0.0.0.0/"
