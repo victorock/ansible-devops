@@ -6,9 +6,9 @@
 
   vars:
     ec2_region: eu-central-1
-    ec2security_group_name: gitlab
-    ec2security_source: 0.0.0.0/0
-    ec2security_ports: [ '22', '80', '443', '9418' ]
+    ec2_security_group_name: gitlab
+    ec2_security_source: 0.0.0.0/0
+    ec2_security_ports: [ '22', '80', '443', '9418' ]
     ec2_cloud_instances: 1
     ec2_cloud_instance_os: CentOS Linux 7 x86_64*
     ec2_cloud_instance_os_type: linux
