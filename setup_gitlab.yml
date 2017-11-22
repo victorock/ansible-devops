@@ -1,24 +1,25 @@
 ---
 - name: "Setup Gitlab-Server"
-  hosts: all
+  hosts: linux:&gitlab
   gather_facts: true
   become: true
+
+  vars:
+    common_package_update: yes
+
+    rhel7cis_named_server: yes
+    rhel7cis_bind: yes
+    rhel7cis_host_allow: [ "0.0.0.0/0" ]
+
+    gitlab_external_url: "https://gitlab.victorock.local/"
+    gitlab_create_self_signed_cert: "true"
+    gitlab_redirect_http_to_https: "true"
 
   tasks:
     - name: "Linux Baseline with Security"
       include_role:
         name: victorock.linux
-      vars:
-        common_package_update: yes
-        rhel7cis_named_server: yes
-        rhel7cis_bind: yes
-        rhel7cis_host_allow:
-          - "0.0.0.0/0"
 
     - name: "Gitlab"
       include_role:
         name: victorock.gitlab
-      vars:
-        gitlab_external_url: "https://gitlab.victorock.local/"
-        gitlab_create_self_signed_cert: "true"
-        gitlab_redirect_http_to_https: "true"
