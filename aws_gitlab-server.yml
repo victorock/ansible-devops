@@ -29,3 +29,5 @@
     - name: "AWS Cloud"
       include_role:
         name: victorock.aws-cloud
+
+- import_playbook: setup_gitlab.yml
