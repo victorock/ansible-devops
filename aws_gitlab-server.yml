@@ -15,7 +15,7 @@
     ec2_cloud_instance_type: t2.medium
     ec2_cloud_instance_boot_disk_volume_size: 60
     ec2_cloud_instance_boot_disk_delete_on_termination: yes
-    ec2_cloud_instance_instance_tags:
+    ec2_cloud_instance_tags:
       Name: gitlab
       Class: management
       Version: 1.0
