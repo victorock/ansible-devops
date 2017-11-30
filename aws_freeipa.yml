@@ -1,0 +1,72 @@
+---
+- name: Create IPA-Server instance in AWS
+  hosts: localhost
+  gather_facts: false
+  become: false
+
+  vars:
+    ec2_region: eu-central-1
+
+  tasks:
+    - name: "AWS Security"
+      include_role:
+        name: victorock.aws-security
+      vars:
+        ec2_security_group_name: freeipa
+        ec2_security_group_source: 0.0.0.0/0
+        ec2_security_group_ports: [ '22', '80', '443' ]
+
+    - name: "AWS Cloud"
+      include_role:
+        name: victorock.aws-cloud
+      vars:
+        ec2_cloud_instances: 1
+        ec2_cloud_instance_os: CentOS Linux 7 x86_64*
+        ec2_cloud_instance_os_type: linux
+        ec2_cloud_instance_type: t2.medium
+        ec2_cloud_instance_boot_disk_volume_size: 60
+        ec2_cloud_instance_boot_disk_delete_on_termination: yes
+        ec2_cloud_instance_instance_tags:
+          OS: linux
+          Name: freeipa
+          Class: management
+          Version: 1_0
+          Environment: dev
+
+- name: "Group IPA nodes by OS distribution"
+  hosts: tag_Name_freeipa
+  gather_facts: true
+  tasks:
+    - name: group hosts by distribution
+      group_by: key="{{ ansible_distribution }}-{{ ansible_distribution_version }}"
+      changed_when: false
+
+- name: "Group supported distributions"
+  hosts: RedHat-7*:CentOS-7*
+  gather_facts: false
+  tasks:
+    - name: group hosts for supported distributions
+      group_by: key="supported"
+      changed_when: false
+
+- name: "Setup IPA Server on supported distributions in Dev"
+  hosts: supported:&*_dev
+  gather_facts: true
+  become: true
+
+  tasks:
+    - name: "Linux Baseline with Security"
+      include_role:
+        name: victorock.linux
+      vars:
+        common_package_update: yes
+        rhel7cis_named_server: yes
+        rhel7cis_bind: yes
+        rhel7cis_host_allow: [ "0.0.0.0/0" ]
+
+    - name: "IPA-Server"
+      include_role:
+        name: victorock.freeipa-server
+      vars:
+        freeipa_domain: "victorock.local"
+        freeipa_hostname: "ipa.victorock.local"
