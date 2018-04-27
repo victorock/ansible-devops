@@ -1,0 +1,7 @@
+[all]
+localhost
+
+[gitlab:children]
+tag_gitlab
+
+[tag_gitlab]

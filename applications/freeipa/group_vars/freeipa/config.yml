@@ -1,0 +1,7 @@
+ipaserver_domain: devops.victorock.io
+ipaserver_hostname: freeipa.devops.victorock.io
+ipaserver_realm: DEVOPS.VICTOROCK.IO
+ipaserver_setup_dns: no
+ipaserver_allow_zone_overlap: yes
+ipaadmin_password: AdminPassword123
+ipadm_password: AdminPassword123

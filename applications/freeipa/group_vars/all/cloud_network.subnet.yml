@@ -1,0 +1,5 @@
+cloud_network:
+  subnet:
+    devops:
+      name: devops
+      cidr: "{{ cloud_provider.cidr | ipsubnet(24, 1) }}"

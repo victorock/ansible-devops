@@ -1,12 +1,20 @@
 # Ansible Demo
 
-## DevOps - Developper Operations Playbooks
+## DevOps - Developer Operations Playbooks
 
-Repository of playbooks maintained by Developper with Operations.
+Repository of playbooks maintained by Developer Operations.
 
-Installs the toolbox:
+Installs the following applications:
 
+- Tower
+- Jenkins
 - GitLab
 - FreeIPA
+- Openshift (soon)
 
-**NOTE: Using Cento7 as Gitlab package for Fedora doesn't exists yet**
+License
+=======
+
+GNU General Public License v3.0
+
+See `COPYING <COPYING>`_ to see the full text.

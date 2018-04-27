@@ -1,0 +1,7 @@
+- name: "Deploy jenkins"
+  hosts: jenkins
+  become: true
+
+  roles:
+    - role: geerlingguy.java
+    - role: geerlingguy.jenkins

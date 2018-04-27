@@ -1,0 +1,7 @@
+[all]
+localhost
+
+[jenkins:children]
+tag_jenkins
+
+[tag_jenkins]

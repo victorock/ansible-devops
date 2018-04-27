@@ -1,0 +1,11 @@
+java_packages:
+  - java-1.8.0
+jenkins_version: "2.118"
+jenkins_plugins:
+  - blueocean
+  - ansible
+  - ansible-tower
+  - greenballs
+  - workflow-aggregator
+  - copyartifact
+  - m2release

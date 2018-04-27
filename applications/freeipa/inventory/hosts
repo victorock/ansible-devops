@@ -1,0 +1,10 @@
+[all]
+localhost
+
+[ipaservers:children]
+freeipa
+
+[freeipa:children]
+tag_freeipa
+
+[tag_freeipa]

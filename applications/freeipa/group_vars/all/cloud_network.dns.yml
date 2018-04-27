@@ -1,0 +1,6 @@
+cloud_network:
+  dns:
+    freeipa:
+      name: freeipa
+      record: freeipa.devops.victorock.io.
+      zone: devops.victorock.io.

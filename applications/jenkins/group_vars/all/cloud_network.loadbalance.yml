@@ -1,0 +1,15 @@
+cloud_network:
+  loadbalance:
+    jenkins-http:
+      name: jenkins-http
+      vip: jenkins
+      protocol: tcp
+      port: 80
+      members:
+        - jenkins-000
+      healthcheck:
+        name: jenkins-http-8080
+        type: HTTP
+        port: 8080
+        protocol: tcp
+        url: "/"

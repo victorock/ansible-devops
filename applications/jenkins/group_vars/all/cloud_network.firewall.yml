@@ -1,0 +1,26 @@
+cloud_network:
+  firewall:
+    jenkins:
+      name: jenkins
+      subnet: devops
+      rules:
+        - name: "jenkins-ssh-all"
+          src_cidr: 0.0.0.0/0
+          dst_port: 22
+          proto: tcp
+
+        - name: "jenkins-http-all"
+          src_cidr: 0.0.0.0/0
+          dst_port: 8080
+          proto: tcp
+
+        - name: "jenkins-https-all"
+          subnet: jenkins
+          src_cidr: 0.0.0.0/0
+          dst_port: 8443
+          proto: tcp
+
+        - name: "jenkins-icmp-all"
+          subnet: jenkins
+          src_cidr: 0.0.0.0/0
+          proto: icmp

@@ -1,0 +1,8 @@
+- name: "Deploy FreeIPA"
+  hosts: freeipa
+  become: true
+
+  tasks:
+    - include_role:
+        name: victorock.ipaserver
+        tasks_from: run
