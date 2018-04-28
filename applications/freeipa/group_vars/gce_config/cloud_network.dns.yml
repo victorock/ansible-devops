@@ -1,0 +1,7 @@
+cloud_network:
+  dns:
+    victorock-io:
+      name: victorock-io
+      public: freeipa-devops-victorock-io
+      zone: victorock.io
+      record: freeipa.devops.victorock.io

@@ -1,0 +1,11 @@
+[all:children]
+gce_config
+gitlab
+
+[gce_config]
+localhost
+
+[gitlab:children]
+tag_gitlab
+
+[tag_gitlab]

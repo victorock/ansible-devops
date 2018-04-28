@@ -1,0 +1,14 @@
+cloud_compute:
+  instance:
+    jenkins:
+      name: jenkins
+      size: n1-standard-1
+      image: centos-7
+      credential:
+        username: jdacosta
+        key: jenkins-devops-victorock-io
+      network:
+        subnet: devops-victorock-io
+        public: jenkins-devops-victorock-io
+      tags:
+        - jenkins

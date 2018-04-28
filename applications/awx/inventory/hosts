@@ -1,0 +1,11 @@
+[all:children]
+gce_config
+awx
+
+[gce_config]
+localhost
+
+[awx:children]
+tag_awx
+
+[tag_awx]

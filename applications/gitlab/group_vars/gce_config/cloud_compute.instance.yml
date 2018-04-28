@@ -1,0 +1,14 @@
+cloud_compute:
+  instance:
+    gitlab:
+      name: gitlab
+      size: n1-standard-1
+      image: centos-7
+      credential:
+        username: jdacosta
+        key: gitlab-devops-victorock-io
+      network:
+        subnet: devops-victorock-io
+        public: gitlab-devops-victorock-io
+      tags:
+        - gitlab

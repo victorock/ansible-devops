@@ -1,0 +1,11 @@
+[all:children]
+gce_config
+freeipa
+
+[gce_config]
+localhost
+
+[freeipa:children]
+tag_freeipa
+
+[tag_freeipa]

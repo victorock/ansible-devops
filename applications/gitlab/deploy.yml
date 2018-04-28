@@ -1,0 +1,13 @@
+- name: "Deploy gitlab"
+  hosts: gitlab
+  become: true
+
+  tasks:
+    - name: "victorock.linux"
+      include_role:
+        name: victorock.linux
+        tasks_from: run
+
+    - name: "geerlingguy.gitlab"
+      include_role:
+        name: geerlingguy.gitlab

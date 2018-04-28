@@ -1,0 +1,7 @@
+cloud_network:
+  dns:
+    victorock-io:
+      name: victorock-io
+      public: gitlab-devops-victorock-io
+      zone: victorock.io
+      record: gitlab.devops.victorock.io
