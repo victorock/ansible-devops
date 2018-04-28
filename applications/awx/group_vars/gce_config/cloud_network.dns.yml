@@ -1,0 +1,7 @@
+cloud_network:
+  dns:
+    victorock-io:
+      name: victorock-io
+      public: awx-devops-victorock-io
+      zone: victorock.io
+      record: awx.devops.victorock.io

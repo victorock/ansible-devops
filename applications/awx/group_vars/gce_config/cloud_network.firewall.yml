@@ -14,18 +14,18 @@ cloud_network:
       dst_port: 80
       proto: tcp
 
-    devops-victorock-io-ldap-all:
-      name: devops-victorock-io-ldap-all
-      subnet: devops-victorock-io
-      src_cidr: 0.0.0.0/0
-      dst_port: 389
-      proto: tcp
-
     devops-victorock-io-https-all:
       name: devops-victorock-io-https-all
       subnet: devops-victorock-io
       src_cidr: 0.0.0.0/0
       dst_port: 443
+      proto: tcp
+
+    devops-victorock-io-git-all:
+      name: devops-victorock-io-git-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 9418
       proto: tcp
 
     devops-victorock-io-icmp-all:

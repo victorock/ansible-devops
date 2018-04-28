@@ -1,0 +1,42 @@
+
+- name: "Deploy AWX"
+  hosts: awx
+  become: true
+
+  tasks:
+    - name: "victorock.linux"
+      include_role:
+        name: victorock.linux
+        tasks_from: run
+
+    - name: "victorock.security"
+      include_role:
+        name: victorock.security
+
+    - name: "geerlingguy.repo-epel"
+      include_role:
+        name: geerlingguy.repo-epel
+
+    - name: "geerlingguy.git"
+      include_role:
+        name: geerlingguy.git
+
+    - name: "geerlingguy.ansible"
+      include_role:
+        name: geerlingguy.ansible
+
+    - name: "geerlingguy.docker"
+      include_role:
+        name: geerlingguy.docker
+
+    - name: "geerlingguy.pip"
+      include_role:
+        name: geerlingguy.pip
+
+    - name: "geerlingguy.nodejs"
+      include_role:
+        name: geerlingguy.nodejs
+
+    - name: "geerlingguy.awx"
+      include_role:
+        name: geerlingguy.awx
