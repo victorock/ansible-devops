@@ -6,10 +6,11 @@ Repository of playbooks maintained by Developer Operations.
 
 Installs the following applications:
 
-- Tower
+- AWX
 - Jenkins
 - GitLab
 - FreeIPA
+- Tower (soon)
 - Openshift (soon)
 
 License
