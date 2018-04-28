@@ -1,0 +1,4 @@
+cloud_network:
+  public:
+    gitlab-devops-victorock-io:
+      name: gitlab-devops-victorock-io

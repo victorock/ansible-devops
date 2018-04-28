@@ -1,3 +1,0 @@
-gitlab_external_url: "http://gitlab.devops.victorock.io/"
-gitlab_create_self_signed_cert: "true"
-gitlab_redirect_http_to_https: "false"

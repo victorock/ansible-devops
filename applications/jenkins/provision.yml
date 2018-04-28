@@ -1,11 +1,12 @@
 ---
 - name: "Provision Instances"
-  hosts: localhost
+  hosts: gce_config
   connection: local
   gather_facts: false
   become: false
 
   tasks:
-    - include_role:
+    - name: "victorock.gce_config"
+      include_role:
         name: victorock.gce_config
         tasks_from: run

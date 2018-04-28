@@ -1,0 +1,35 @@
+cloud_network:
+  firewall:
+    devops-victorock-io-ssh-all:
+      name: devops-victorock-io-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 22
+      proto: tcp
+
+    devops-victorock-io-http-all:
+      name: devops-victorock-io-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 22
+      proto: tcp
+
+    devops-victorock-io-ldap-all:
+      name: devops-victorock-io-ldap-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 389
+      proto: tcp
+
+    devops-victorock-io-https-all:
+      name: devops-victorock-io-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 443
+      proto: tcp
+
+    devops-victorock-io-icmp-all:
+      name: devops-victorock-io-icmp-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      proto: icmp

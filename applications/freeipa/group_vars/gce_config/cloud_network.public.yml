@@ -1,0 +1,4 @@
+cloud_network:
+  public:
+    freeipa-devops-victorock-io:
+      name: freeipa-devops-victorock-io

@@ -1,14 +1,14 @@
 cloud_compute:
   instance:
-    freeipa-000:
-      name: freeipa-000
+    freeipa:
+      name: freeipa
       size: n1-standard-1
       image: centos-7
       credential:
         username: jdacosta
-        key: freeipa
+        key: freeipa-devops-victorock-io
       network:
-        subnet: devops
-        public: yes
+        subnet: devops-victorock-io
+        public: freeipa-devops-victorock-io
       tags:
         - freeipa

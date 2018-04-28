@@ -1,6 +1,0 @@
-cloud_network:
-  dns:
-    gitlab:
-      name: gitlab
-      record: gitlab.devops.victorock.io.
-      zone: devops.victorock.io.

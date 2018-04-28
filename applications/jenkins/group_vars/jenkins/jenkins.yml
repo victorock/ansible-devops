@@ -1,6 +1,7 @@
 java_packages:
   - java-1.8.0
 jenkins_version: "2.118"
+jenkins_plugin_timeout: 120
 jenkins_plugins:
   - blueocean
   - ansible

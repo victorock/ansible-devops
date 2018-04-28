@@ -1,4 +1,10 @@
 - name: geerlingguy.jenkins
+
+- src: https://github.com/victorock/ansible-role-linux.git
+  scm: git
+  version: dev
+  name: victorock.linux
+
 - src: https://github.com/victorock/ansible-role-gce-config.git
   scm: git
   version: dev

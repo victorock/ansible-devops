@@ -1,4 +1,8 @@
-[all]
+[all:children]
+gce_config
+gitlab
+
+[gce_config]
 localhost
 
 [gitlab:children]

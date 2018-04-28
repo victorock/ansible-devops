@@ -1,4 +1,0 @@
-cloud_network:
-  public:
-    gitlab:
-      name: gitlab

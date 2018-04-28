@@ -394,7 +394,8 @@ class GceInventory(object):
             'gce_network': net,
             'gce_subnetwork': subnet,
             # Hosts don't have a public name, so we add an IP
-            'ansible_ssh_host': ssh_host
+            'ansible_ssh_host': ssh_host,
+            'ansible_host': ssh_host
         }
 
     def load_inventory_from_cache(self):

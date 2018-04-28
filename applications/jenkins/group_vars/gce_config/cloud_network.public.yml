@@ -1,0 +1,4 @@
+cloud_network:
+  public:
+    jenkins-devops-victorock-io:
+      name: jenkins-devops-victorock-io

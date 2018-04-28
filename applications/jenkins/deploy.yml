@@ -1,7 +1,14 @@
+
 - name: "Deploy jenkins"
   hosts: jenkins
   become: true
 
-  roles:
-    - role: geerlingguy.java
-    - role: geerlingguy.jenkins
+  tasks:
+    - name: "victorock.linux"
+      include_role:
+        name: victorock.linux
+        tasks_from: run
+
+    - name: "geerlingguy.jenkins"
+      include_role:
+        name: geerlingguy.jenkins
