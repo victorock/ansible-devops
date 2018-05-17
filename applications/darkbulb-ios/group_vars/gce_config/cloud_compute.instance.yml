@@ -1,0 +1,20 @@
+cloud_compute:
+  instance:
+    darkbulb-ios:
+      name: darkbulb-ios
+      size: n1-standard-8
+      image: nested-centos-7
+      boot:
+        size: 60
+        persistent: yes
+      credential:
+        username: jdacosta
+        key: darkbulb-ios-devops-victorock-io
+      network:
+        subnet: devops-victorock-io
+        public: darkbulb-ios-devops-victorock-io
+      storage:
+        data: darkbulb-ios-devops-victorock-io
+      tags:
+        - darkbulb-ios
+        - darkbulb

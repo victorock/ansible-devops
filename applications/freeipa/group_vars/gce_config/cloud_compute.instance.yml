@@ -4,6 +4,9 @@ cloud_compute:
       name: freeipa
       size: n1-standard-1
       image: centos-7
+      boot:
+        size: 60
+        persistent: true
       credential:
         username: jdacosta
         key: freeipa-devops-victorock-io

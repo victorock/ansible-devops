@@ -1,0 +1,7 @@
+ansible_tower_setup_version: "3.2.4"
+ansible_tower_setup_dir: "/opt"
+ansible_tower_setup_admin_password: "toweradmin"
+ansible_tower_setup_pg_database: "tower"
+ansible_tower_setup_pg_username: "tower"
+ansible_tower_setup_pg_password: "toweradmin"
+ansible_tower_setup_rabbitmq_pass: "tower"

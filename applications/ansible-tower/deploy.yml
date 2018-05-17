@@ -1,0 +1,7 @@
+- name: "Deploy: Ansible Tower"
+  hosts: ansible-tower
+  gather_facts: yes
+  become: yes
+
+  roles:
+    - victorock.ansible-tower

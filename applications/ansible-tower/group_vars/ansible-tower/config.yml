@@ -1,0 +1,7 @@
+---
+ansible_tower_config:
+  host: "ansible-tower.devops.victorock.io"
+  username: "admin"
+  password: "toweradmin"
+  verify_ssl: false
+  format: json

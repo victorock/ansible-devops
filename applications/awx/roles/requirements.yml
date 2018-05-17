@@ -1,10 +1,8 @@
-- name: geerlingguy.awx
-- name: geerlingguy.repo-epel
-- name: geerlingguy.git
-- name: geerlingguy.ansible
-- name: geerlingguy.docker
-- name: geerlingguy.pip
-- name: geerlingguy.nodejs
+- src: https://github.com/victorock/ansible-role-awx.git
+  scm: git
+  version: victorock-galaxy-dependencies
+  name: geerlingguy.awx
+
 - name: victorock.security
 
 - src: https://github.com/victorock/ansible-role-linux.git

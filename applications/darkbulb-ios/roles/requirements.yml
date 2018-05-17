@@ -1,0 +1,14 @@
+- src: https://github.com/victorock/ansible-role-darkbulb.git
+  scm: git
+  version: dev
+  name: victorock.darkbulb
+
+- src: https://github.com/victorock/ansible-role-darkbulb-topology.git
+  scm: git
+  version: dev
+  name: victorock.darkbulb-topology
+
+- src: https://github.com/victorock/ansible-role-gce-config.git
+  scm: git
+  version: dev
+  name: victorock.gce_config

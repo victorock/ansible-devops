@@ -1,0 +1,430 @@
+libvirt_compute:
+  instances:
+    - name: spine01
+      provider: qemu
+      arch: "x86_64"
+      vcpu: 1
+      memory: 1024
+      image: "vios_l2-adventerprisek9-m.03.2017.qcow2"
+      boot:
+        size: 2
+        persistent: yes
+      network:
+        interfaces:
+          - name: GigabitEthernet-0-0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: GigabitEthernet-0-1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "11001"
+            peer_address: "127.0.0.1"
+            peer_port: "21001"
+          - name: GigabitEthernet-0-2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "11002"
+            peer_address: "127.0.0.1"
+            peer_port: "22001"
+          - name: GigabitEthernet-0-3
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "11003"
+            peer_address: "127.0.0.1"
+            peer_port: "23001"
+          - name: GigabitEthernet-0-4
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "11004"
+            peer_address: "127.0.0.1"
+            peer_port: "24001"
+    - name: spine02
+      type: "qemu"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "/home/darkbulb/images/qcow2/vios_l2-adventerprisek9-m.03.2017.qcow2"
+      boot:
+        size: 2
+        persistent: yes
+      network:
+        interfaces:
+          - name: GigabitEthernet-0-0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: GigabitEthernet-0-1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "12001"
+            peer_address: "127.0.0.1"
+            peer_port: "21002"
+          - name: GigabitEthernet-0-2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "12002"
+            peer_address: "127.0.0.1"
+            peer_port: "22002"
+          - name: GigabitEthernet-0-3
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "12003"
+            peer_address: "127.0.0.1"
+            peer_port: "23002"
+          - name: GigabitEthernet-0-4
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "12004"
+            peer_address: "127.0.0.1"
+            peer_port: "24002"
+    - name: leaf01
+      type: "qemu"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "/home/darkbulb/images/qcow2/vios_l2-adventerprisek9-m.03.2017.qcow2"
+      boot:
+        size: 2
+        persistent: yes
+      network:
+        interfaces:
+          - name: GigabitEthernet-0-0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: GigabitEthernet-0-1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "21001"
+            peer_address: "127.0.0.1"
+            peer_port: "11001"
+          - name: GigabitEthernet-0-2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "21002"
+            peer_address: "127.0.0.1"
+            peer_port: "12001"
+          - name: GigabitEthernet-0-3
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "21003"
+            peer_address: "127.0.0.1"
+            peer_port: "22003"
+          - name: GigabitEthernet-0-4
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "21004"
+            peer_address: "127.0.0.1"
+            peer_port: "31001"
+    - name: leaf02
+      type: "qemu"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "/home/darkbulb/images/qcow2/vios_l2-adventerprisek9-m.03.2017.qcow2"
+      boot:
+        size: 2
+        persistent: yes
+      network:
+        interfaces:
+          - name: GigabitEthernet-0-0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: GigabitEthernet-0-1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "22001"
+            peer_address: "127.0.0.1"
+            peer_port: "11002"
+          - name: GigabitEthernet-0-2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "22002"
+            peer_address: "127.0.0.1"
+            peer_port: "12002"
+          - name: GigabitEthernet-0-3
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "22003"
+            peer_address: "127.0.0.1"
+            peer_port: "21003"
+          - name: GigabitEthernet-0-4
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "22004"
+            peer_address: "127.0.0.1"
+            peer_port: "31002"
+    - name: server01
+      type: "kvm"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
+      type: server
+      boot:
+        size: 10
+        persistent: yes
+      network:
+        interfaces:
+          - name: eth0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: eth1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "31001"
+            peer_address: "127.0.0.1"
+            peer_port: "21004"
+          - name: eth2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "31002"
+            peer_address: "127.0.0.1"
+            peer_port: "22004"
+    - name: leaf03
+      type: "qemu"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "/home/darkbulb/images/qcow2/vios_l2-adventerprisek9-m.03.2017.qcow2"
+      boot:
+        size: 2
+        persistent: yes
+      network:
+        interfaces:
+          - name: GigabitEthernet-0-0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: GigabitEthernet-0-1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "13001"
+            peer_address: "127.0.0.1"
+            peer_port: "11003"
+          - name: GigabitEthernet-0-2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "13002"
+            peer_address: "127.0.0.1"
+            peer_port: "12003"
+          - name: GigabitEthernet-0-3
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "13003"
+            peer_address: "127.0.0.1"
+            peer_port: "14003"
+          - name: GigabitEthernet-0-4
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "13004"
+            peer_address: "127.0.0.1"
+            peer_port: "32001"
+    - name: leaf04
+      type: "qemu"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "/home/darkbulb/images/qcow2/vios_l2-adventerprisek9-m.03.2017.qcow2"
+      boot:
+        size: 2
+        persistent: yes
+      network:
+        interfaces:
+          - name: GigabitEthernet-0-0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: GigabitEthernet-0-1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "14001"
+            peer_address: "127.0.0.1"
+            peer_port: "11004"
+          - name: GigabitEthernet-0-2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "11002"
+            peer_address: "127.0.0.1"
+            peer_port: "12004"
+          - name: GigabitEthernet-0-3
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "14003"
+            peer_address: "127.0.0.1"
+            peer_port: "13003"
+          - name: GigabitEthernet-0-4
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "14004"
+            peer_address: "127.0.0.1"
+            peer_port: "32002"
+    - name: server02
+      type: "kvm"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
+      type: server
+      boot:
+        size: 10
+        persistent: yes
+      network:
+        interfaces:
+          - name: eth0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: eth1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "32001"
+            peer_address: "127.0.0.1"
+            peer_port: "23004"
+          - name: eth2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "32002"
+            peer_address: "127.0.0.1"
+            peer_port: "24004"
+    - name: border01
+      type: "qemu"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "/home/darkbulb/images/qcow2/vios_l2-adventerprisek9-m.03.2017.qcow2"
+      boot:
+        size: 2
+        persistent: yes
+      network:
+        interfaces:
+          - name: GigabitEthernet-0-0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: GigabitEthernet-0-1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "15001"
+            peer_address: "127.0.0.1"
+            peer_port: "11005"
+          - name: GigabitEthernet-0-2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "15002"
+            peer_address: "127.0.0.1"
+            peer_port: "12005"
+          - name: GigabitEthernet-0-3
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "15003"
+            peer_address: "127.0.0.1"
+            peer_port: "16003"
+          - name: GigabitEthernet-0-4
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "15004"
+            peer_address: "127.0.0.1"
+            peer_port: "41001"
+          - name: GigabitEthernet-0-5
+            model: e1000
+            subnet: internet-devops-victorock-io
+    - name: border02
+      type: "qemu"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "/home/darkbulb/images/qcow2/vios_l2-adventerprisek9-m.03.2017.qcow2"
+      boot:
+        size: 2
+        persistent: yes
+      network:
+        interfaces:
+          - name: GigabitEthernet-0-0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: GigabitEthernet-0-1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "16001"
+            peer_address: "127.0.0.1"
+            peer_port: "11006"
+          - name: GigabitEthernet-0-2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "16002"
+            peer_address: "127.0.0.1"
+            peer_port: "12006"
+          - name: GigabitEthernet-0-3
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "16003"
+            peer_address: "127.0.0.1"
+            peer_port: "15003"
+          - name: GigabitEthernet-0-4
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "16004"
+            peer_address: "127.0.0.1"
+            peer_port: "41002"
+          - name: GigabitEthernet-0-5
+            model: e1000
+            subnet: internet-devops-victorock-io
+    - name: edge01
+      type: "qemu"
+      project: "darkbulb"
+      memory: 1024
+      vcpu: 1
+      image: "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
+      boot:
+        size: 10
+        persistent: yes
+      network:
+        interfaces:
+          - name: eth0
+            model: e1000
+            subnet: mgmt-devops-victorock-io
+          - name: eth1
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "41001"
+            peer_address: "127.0.0.1"
+            peer_port: "25004"
+          - name: eth2
+            model: "e1000"
+            type: udp
+            local_address: "127.0.0.1"
+            local_port: "41002"
+            peer_address: "127.0.0.1"
+            peer_port: "26004"

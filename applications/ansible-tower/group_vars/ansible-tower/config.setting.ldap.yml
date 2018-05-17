@@ -1,0 +1,53 @@
+---
+ansible_tower_config:
+  ldap_auth:
+    uri: "ldaps://freeipa.devops.victorock.io"
+    bind_dn: "cn=tower,cn=users,cn=accounts,dc=ipa,dc=victorock,dc=io"
+    bind_password: "toweradmin"
+
+    user_search:
+      - "cn=users,cn=accounts,dc=ipa,dc=victorock,dc=io"
+      - SCOPE_SUBTREE
+      - "(uid=%(user)s)"
+    user_attribute_map:
+      first_name: "givenName"
+      last_name: "sn"
+      email: "mail"
+
+    require_group: "cn=tower-users,cn=groups,cn=accounts,dc=ipa,dc=victorock,dc=io"
+    group_search:
+      - "cn=groups,cn=accounts,dc=ipa,dc=victorock,dc=io"
+      - SCOPE_SUBTREE
+      - "(objectClass=groupofnames)"
+
+    organization_map:
+      - name: "DEMO"
+        ldap_admin_group: "cn=tower-admin-demo,cn=groups,cn=accounts,dc=ipa,dc=victorock,dc=io"
+        ldap_user_groups:
+          - "cn=tower-users-demo,cn=groups,cn=accounts,dc=ipa,dc=victorock,dc=io"
+
+    team_map:
+      - name: "infraops"
+        organization: "DEMO"
+        ldap_user_groups:
+          - "cn=ifraops-demo,cn=groups,cn=accounts,dc=ipa,dc=victorock,dc=io"
+
+      - name: "netops"
+        organization: "DEMO"
+        ldap_user_groups:
+          - "cn=netops-demo,cn=groups,cn=accounts,dc=ipa,dc=victorock,dc=io"
+
+      - name: "devops"
+        organization: "DEMO"
+        ldap_user_groups:
+          - "cn=devops-demo,cn=groups,cn=accounts,dc=ipa,dc=victorock,dc=io"
+
+      - name: "sysops"
+        organization: "DEMO"
+        ldap_user_groups:
+          - "cn=sysops-demo,cn=groups,cn=accounts,dc=ipa,dc=victorock,dc=io"
+
+      - name: "secops"
+        organization: "DEMO"
+        ldap_user_groups:
+          - "cn=secops-demo,cn=groups,cn=accounts,dc=ipa,dc=victorock,dc=io"

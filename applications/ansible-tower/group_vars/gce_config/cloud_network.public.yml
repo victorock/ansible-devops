@@ -1,0 +1,4 @@
+cloud_network:
+  public:
+    ansible-tower-devops-victorock-io:
+      name: ansible-tower-devops-victorock-io

@@ -1,0 +1,24 @@
+- src: https://github.com/victorock/ansible-role-ansible-tower.git
+  scm: git
+  version: dev
+  name: victorock.ansible-tower
+
+- src: https://github.com/victorock/ansible-role-ansible-tower-setup.git
+  scm: git
+  version: dev
+  name: victorock.ansible-tower-setup
+
+- src: https://github.com/victorock/ansible-role-ansible-tower-facts.git
+  scm: git
+  version: dev
+  name: victorock.ansible-tower-facts
+
+- src: https://github.com/victorock/ansible-role-ansible-tower-config.git
+  scm: git
+  version: dev
+  name: victorock.ansible-tower-config
+
+- src: https://github.com/victorock/ansible-role-gce-config.git
+  scm: git
+  version: dev
+  name: victorock.gce_config

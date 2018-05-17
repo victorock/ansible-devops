@@ -1,0 +1,4 @@
+---
+ansible_tower_config:
+  setting:
+    license: "{{ lookup('file', 'files/tower_license.txt') | from_json }}"

@@ -1,0 +1,11 @@
+[all:children]
+gce_config
+ansible-tower
+
+[gce_config]
+localhost
+
+[ansible-tower:children]
+tag_ansible-tower
+
+[tag_ansible-tower]

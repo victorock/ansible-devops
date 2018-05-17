@@ -1,0 +1,10 @@
+
+- name: "Deploy Darkbulb for NXOS"
+  hosts: darkbulb-nxos
+  become: true
+
+  tasks:
+    - name: "victorock.darkbulb"
+      include_role:
+        name: "victorock.darkbulb"
+        tasks_from: run

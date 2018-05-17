@@ -1,0 +1,20 @@
+cloud_compute:
+  instance:
+    darkbulb-nxos:
+      name: darkbulb-nxos
+      size: n1-standard-16
+      image: nested-centos-7
+      boot:
+        size: 60
+        persistent: yes
+      credential:
+        username: jdacosta
+        key: darkbulb-nxos-devops-victorock-io
+      network:
+        subnet: devops-victorock-io
+        public: darkbulb-nxos-devops-victorock-io
+      storage:
+        data: darkbulb-nxos-devops-victorock-io
+      tags:
+        - darkbulb-nxos
+        - darkbulb

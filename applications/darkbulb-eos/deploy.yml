@@ -1,0 +1,10 @@
+
+- name: "Deploy Darkbulb for EOS"
+  hosts: darkbulb-eos
+  become: true
+
+  tasks:
+    - name: "victorock.darkbulb"
+      include_role:
+        name: "victorock.darkbulb"
+        tasks_from: run

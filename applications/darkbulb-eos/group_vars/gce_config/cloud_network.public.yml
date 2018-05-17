@@ -1,0 +1,4 @@
+cloud_network:
+  public:
+    darkbulb-eos-devops-victorock-io:
+      name: darkbulb-eos-devops-victorock-io

@@ -1,0 +1,7 @@
+cloud_network:
+  dns:
+    ansible-tower.devops.victorock.io:
+      name: victorock-io
+      zone: victorock.io
+      public: ansible-tower-devops-victorock-io
+      record: ansible-tower.devops.victorock.io

@@ -1,0 +1,17 @@
+cloud_compute:
+  instance:
+    ansible-tower:
+      name: ansible-tower
+      size: n1-standard-2
+      image: centos-7
+      boot:
+        size: 60
+        persistent: true
+      credential:
+        username: jdacosta
+        key: ansible-tower-devops-victorock-io
+      network:
+        subnet: devops-victorock-io
+        public: ansible-tower-devops-victorock-io
+      tags:
+        - ansible-tower

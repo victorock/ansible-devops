@@ -1,0 +1,7 @@
+cloud_network:
+  dns:
+    victorock-io:
+      name: victorock-io
+      public: darkbulb-ios-devops-victorock-io
+      zone: victorock.io
+      record: darkbulb-ios.devops.victorock.io

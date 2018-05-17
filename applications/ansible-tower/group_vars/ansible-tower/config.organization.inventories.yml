@@ -1,0 +1,13 @@
+---
+ansible_tower_config:
+  organization:
+    DEMO:
+      inventories:
+        - name: "infraops"
+          description: "infraops"
+        - name: "netops"
+          description: "netops"
+        - name: "sysops"
+          description: "sysops"
+        - name: "secops"
+          description: "secops"

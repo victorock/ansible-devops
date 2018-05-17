@@ -1,0 +1,4 @@
+cloud_network:
+  public:
+    darkbulb-nxos-devops-victorock-io:
+      name: darkbulb-nxos-devops-victorock-io

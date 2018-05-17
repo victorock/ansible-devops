@@ -1,0 +1,341 @@
+---
+ansible_tower_config:
+  organization:
+    DEMO:
+      job_templates:
+########################################################################
+#                           Netops - NXOS                              #
+########################################################################
+        - name: "Dev: nxos_facts"
+          description: "Dev: nxos_facts"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/playbooks/facts.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_banner"
+          description: "Dev: nxos_banner"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/playbooks/banner.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_feature"
+          description: "Dev: nxos_feature"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/playbooks/feature.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_vlan"
+          description: "Dev: nxos_vlan"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/playbooks/vlan.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          ask_extra_vars: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_switchport"
+          description: "Dev: nxos_switchport"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/playbooks/interface_switchport.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          ask_extra_vars: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_running_config"
+          description: "Dev: nxos_running_config"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/operations/running_config.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_tech_support"
+          description: "Dev: nxos_tech_support"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/operations/tech_support.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_spanning_tree"
+          description: "Dev: nxos_spanning_tree"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/operations/spanning_tree.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_arp"
+          description: "Dev: nxos_arp"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/operations/arp.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_version"
+          description: "Dev: nxos_version"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/operations/version.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_cloud"
+          description: "Dev: nxos_cloud"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/applications/cloud/europe-central-fr1/main.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_cloud_pod01"
+          description: "Dev: nxos_cloud_pod01"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/applications/cloud/europe-central-fr1/pod01.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos:&pod01"
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_cloud_pod02"
+          description: "Dev: nxos_cloud_pod02"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/applications/cloud/europe-central-fr1/pod02.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos:&pod01"
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_fabric"
+          description: "Dev: nxos_fabric"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/applications/fabric/europe-central-fr1/main.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos"
+#          ask_limit_on_launch: true
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_fabric_spine"
+          description: "Dev: nxos_fabric_spine"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/applications/fabric/europe-central-fr1/spine.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos:&spine"
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+        - name: "Dev: nxos_fabric_leaf"
+          description: "Dev: nxos_fabric_leaf"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/nxos/applications/fabric/europe-central-fr1/leaf.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "nxos:&leaf"
+          machine_credential: "network-nxos-ssh"
+          network_credential: "network-nxos-net"
+
+########################################################################
+#                           Netops - IOS                              #
+########################################################################
+        - name: "Dev: ios_facts"
+          description: "Dev: ios_facts"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/ios/playbooks/facts.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "ios"
+#          ask_limit_on_launch: true
+          machine_credential: "network-ios-ssh"
+          network_credential: "network-ios-net"
+
+        - name: "Dev: ios_banner"
+          description: "Dev: ios_banner"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/ios/playbooks/banner.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "ios"
+#          ask_limit_on_launch: true
+          machine_credential: "network-ios-ssh"
+          network_credential: "network-ios-net"
+
+        - name: "Dev: ios_vlan"
+          description: "Dev: ios_vlan"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/ios/playbooks/vlan.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "ios"
+#          ask_limit_on_launch: true
+          ask_extra_vars: true
+          machine_credential: "network-ios-ssh"
+          network_credential: "network-ios-net"
+
+        - name: "Dev: ios_running_config"
+          description: "Dev: ios_running_config"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/ios/operations/running_config.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "ios"
+#          ask_limit_on_launch: true
+          machine_credential: "network-ios-ssh"
+          network_credential: "network-ios-net"
+
+        - name: "Dev: ios_tech_support"
+          description: "Dev: ios_tech_support"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/ios/operations/tech_support.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "ios"
+#          ask_limit_on_launch: true
+          machine_credential: "network-ios-ssh"
+          network_credential: "network-ios-net"
+
+        - name: "Dev: ios_spanning_tree"
+          description: "Dev: ios_spanning_tree"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/ios/operations/spanning_tree.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "ios"
+#          ask_limit_on_launch: true
+          machine_credential: "network-ios-ssh"
+          network_credential: "network-ios-net"
+
+        - name: "Dev: ios_arp"
+          description: "Dev: ios_arp"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/ios/operations/arp.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "ios"
+#          ask_limit_on_launch: true
+          machine_credential: "network-ios-ssh"
+          network_credential: "network-ios-net"
+
+        - name: "Dev: ios_version"
+          description: "Dev: ios_version"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/ios/operations/version.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "ios"
+#          ask_limit_on_launch: true
+          machine_credential: "network-ios-ssh"
+          network_credential: "network-ios-net"
+
+########################################################################
+#                     Netops - F5                                      #
+########################################################################
+
+########################################################################
+#                     Netops - F5 - f5_passwd                          #
+########################################################################
+        - name: "1: f5-passwd"
+          description: "1: f5-passwd"
+          project: "network-automation-an-demos"
+          playbook: "f5/f5-passwd.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          network_credential: "empty-ssh"
+
+########################################################################
+#                     Netops - F5 - f5_system                          #
+########################################################################
+        - name: "2: f5-system"
+          description: "2: f5-system"
+          project: "network-automation-an-demos"
+          playbook: "f5/f5-system.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          network_credential: "empty-ssh"
+
+########################################################################
+#                     Netops - F5 - f5_vserver                          #
+########################################################################
+        - name: "3: f5-vserver"
+          description: "3: f5-vserver"
+          project: "network-automation-an-demos"
+          playbook: "f5/f5-vserver.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          network_credential: "empty-ssh"
+
+########################################################################
+#                     Netops - F5 - f5_facts                          #
+########################################################################
+        - name: "4: f5-facts"
+          description: "4: f5-facts"
+          project: "network-automation-an-demos"
+          playbook: "f5/f5-facts.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          network_credential: "empty-ssh"
+
+########################################################################
+#                           Sysops - Lightbulb                         #
+########################################################################
+        - name: "apache-simple-playbook"
+          description: "apache-simple-playbook"
+          project: "ansible-lightbulb"
+          playbook: "examples/apache-simple-playbook/site.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: "web"
+          machine_credential: "system-linux-ssh"

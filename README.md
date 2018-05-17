@@ -1,21 +1,29 @@
-# Ansible Demo
+# Ansible Devops
 
-## DevOps - Developer Operations Playbooks
+## DevOps - Demo Builder
 
-Repository of playbooks maintained by Developer Operations.
+Repository containing self-contained playbooks to install the following applications:
 
-Installs the following applications:
-
+- Ansible Tower
 - AWX
-- Jenkins
-- GitLab
 - FreeIPA
-- Tower (soon)
+- GitLab
+- Jenkins
+- Artifactory
+- Darkbulb-NXOS
+- Darkbulb-IOS
+- Darkbulb-EOS
+- Darkbulb-JUNOS
+- oVirt (on-going)
 - Openshift (soon)
+
+Cloud Providers:
+
+- Google Compute Platform
 
 License
 =======
 
 GNU General Public License v3.0
 
-See `COPYING <COPYING>`_ to see the full text.
+See `COPYING <COPYING>` to see the full text.

@@ -1,0 +1,203 @@
+cloud_network:
+  firewall:
+    devops-victorock-io-ssh-all:
+      name: devops-victorock-io-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 22
+      proto: tcp
+
+    devops-victorock-io-cockpit-all:
+      name: devops-victorock-io-cockpit-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 9090
+      proto: tcp
+
+    devops-victorock-io-http-all:
+      name: devops-victorock-io-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 80
+      proto: tcp
+
+    devops-victorock-io-https-all:
+      name: devops-victorock-io-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 443
+      proto: tcp
+
+    darkbulb-devops-victorock-io-spine01-ssh-all:
+      name: darkbulb-devops-victorock-io-spine01-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 11022
+      proto: tcp
+
+    darkbulb-devops-victorock-io-spine01-http-all:
+      name: darkbulb-devops-victorock-io-spine01-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 11080
+      proto: tcp
+
+    darkbulb-devops-victorock-io-spine01-https-all:
+      name: darkbulb-devops-victorock-io-spine01-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 11443
+      proto: tcp
+
+    darkbulb-devops-victorock-io-spine02-ssh-all:
+      name: darkbulb-devops-victorock-io-spine02-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 12022
+      proto: tcp
+
+    darkbulb-devops-victorock-io-spine02-http-all:
+      name: darkbulb-devops-victorock-io-spine02-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 12080
+      proto: tcp
+
+    darkbulb-devops-victorock-io-spine02-https-all:
+      name: darkbulb-devops-victorock-io-spine02-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 12443
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf01-ssh-all:
+      name: darkbulb-devops-victorock-io-leaf01-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 13022
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf01-http-all:
+      name: darkbulb-devops-victorock-io-leaf01-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 13080
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf01-https-all:
+      name: darkbulb-devops-victorock-io-leaf01-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 13443
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf02-ssh-all:
+      name: darkbulb-devops-victorock-io-leaf02-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 14022
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf02-http-all:
+      name: darkbulb-devops-victorock-io-leaf02-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 14080
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf02-https-all:
+      name: darkbulb-devops-victorock-io-leaf02-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 14443
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf03-ssh-all:
+      name: darkbulb-devops-victorock-io-leaf03-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 15022
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf03-http-all:
+      name: darkbulb-devops-victorock-io-leaf03-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 15080
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf03-https-all:
+      name: darkbulb-devops-victorock-io-leaf03-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 15443
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf04-ssh-all:
+      name: darkbulb-devops-victorock-io-leaf04-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 16022
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf04-http-all:
+      name: darkbulb-devops-victorock-io-leaf04-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 16080
+      proto: tcp
+
+    darkbulb-devops-victorock-io-leaf04-https-all:
+      name: darkbulb-devops-victorock-io-leaf04-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 16443
+      proto: tcp
+
+    darkbulb-devops-victorock-io-server01-ssh-all:
+      name: darkbulb-devops-victorock-io-server01-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 21022
+      proto: tcp
+
+    darkbulb-devops-victorock-io-server01-http-all:
+      name: darkbulb-devops-victorock-io-server01-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 21080
+      proto: tcp
+
+    darkbulb-devops-victorock-io-server01-https-all:
+      name: darkbulb-devops-victorock-io-server01-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 21443
+      proto: tcp
+
+    darkbulb-devops-victorock-io-server02-ssh-all:
+      name: darkbulb-devops-victorock-io-server02-ssh-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 22022
+      proto: tcp
+
+    darkbulb-devops-victorock-io-server02-http-all:
+      name: darkbulb-devops-victorock-io-server02-http-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 22080
+      proto: tcp
+
+    darkbulb-devops-victorock-io-server02-https-all:
+      name: darkbulb-devops-victorock-io-server02-https-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      dst_port: 22443
+      proto: tcp
+
+    devops-victorock-io-icmp-all:
+      name: devops-victorock-io-icmp-all
+      subnet: devops-victorock-io
+      src_cidr: 0.0.0.0/0
+      proto: icmp

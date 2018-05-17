@@ -1,0 +1,5 @@
+---
+
+openshift_node_labels: 
+  region: master 
+

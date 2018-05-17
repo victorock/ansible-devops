@@ -1,0 +1,11 @@
+[all:children]
+gce_config
+darkbulb-eos
+
+[gce_config]
+localhost
+
+[darkbulb-eos:children]
+tag_darkbulb-eos
+
+[tag_darkbulb-eos]

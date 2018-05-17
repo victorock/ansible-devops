@@ -1,0 +1,18 @@
+# This is the Ansible Galaxy requirements file to pull in the correct roles
+# to support the operation of CASL provisioning/runs.
+# and also support any role dependency while using the repository in Ansible Tower
+
+# From 'infra-ansible'
+- src: https://github.com/redhat-cop/infra-ansible
+
+# From 'openshift-applier'
+- src: https://github.com/redhat-cop/openshift-applier
+  version: v3.7.2
+
+# From 'openshift-ansible-contrib'
+- src: https://github.com/openshift/openshift-ansible-contrib
+  version: v3.7.0
+
+# From 'openshift-ansible'
+- src: https://github.com/openshift/openshift-ansible
+  version: release-3.9

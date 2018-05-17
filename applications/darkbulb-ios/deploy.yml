@@ -1,0 +1,15 @@
+
+- name: "Deploy Darkbulb for IOS"
+  hosts: darkbulb-ios
+  become: true
+
+  tasks:
+    - name: "victorock.darkbulb"
+      include_role:
+        name: "victorock.darkbulb"
+        tasks_from: run
+
+    - name: "victorock.darkbulb-topology"
+      include_role:
+        name: "victorock.darkbulb-topology"
+        tasks_from: run

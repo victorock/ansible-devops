@@ -2,7 +2,7 @@ cloud_compute:
   instance:
     awx:
       name: awx
-      size: n1-standard-1
+      size: n1-standard-2
       image: centos-7
       credential:
         username: jdacosta

@@ -1,0 +1,11 @@
+[all:children]
+gce_config
+darkbulb-nxos
+
+[gce_config]
+localhost
+
+[darkbulb-nxos:children]
+tag_darkbulb-nxos
+
+[tag_darkbulb-nxos]

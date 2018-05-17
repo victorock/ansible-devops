@@ -1,0 +1,11 @@
+[all:children]
+gce_config
+darkbulb-junos
+
+[gce_config]
+localhost
+
+[darkbulb-junos:children]
+tag_darkbulb-junos
+
+[tag_darkbulb-junos]

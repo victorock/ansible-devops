@@ -1,0 +1,10 @@
+
+- name: "Deploy Darkbulb for JUNOS"
+  hosts: darkbulb-junos
+  become: true
+
+  tasks:
+    - name: "victorock.darkbulb"
+      include_role:
+        name: "victorock.darkbulb"
+        tasks_from: run
