@@ -15,3 +15,4 @@ cloud_compute:
         public: jenkins-devops-victorock-io
       tags:
         - jenkins
+        - devops
