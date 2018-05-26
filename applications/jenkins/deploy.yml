@@ -2,6 +2,7 @@
 - name: "Deploy jenkins"
   hosts: jenkins
   become: true
+  gather_facts: yes
 
   tasks:
     - name: "victorock.linux"

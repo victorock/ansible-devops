@@ -1,5 +1,6 @@
 - name: "Deploy FreeIPA"
   hosts: freeipa
+  gather_facts: yes
   become: true
 
   tasks:
