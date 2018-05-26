@@ -1,1 +1,3 @@
 linux_hostname: ansible-tower.devops.victorock.io
+linux_packages:
+  - "@Development Tools"

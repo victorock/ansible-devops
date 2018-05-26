@@ -10,6 +10,7 @@ ansible_tower_config:
           last_name: "Operations"
           superuser: true
           auditor: false
+
         - name: "netops"
           password: "netops"
           email: "netops@acme.com"
@@ -17,6 +18,7 @@ ansible_tower_config:
           last_name: "Operations"
           superuser: false
           auditor: false
+
         - name: "devops"
           password: "devops"
           email: "devops@acme.com"
@@ -24,6 +26,7 @@ ansible_tower_config:
           last_name: "Operations"
           superuser: false
           auditor: false
+
         - name: "sysops"
           password: "sysops"
           email: "sysops@acme.com"
@@ -31,6 +34,7 @@ ansible_tower_config:
           last_name: "Operations"
           superuser: false
           auditor: false
+
         - name: "secops"
           password: "secops"
           email: "secops@acme.com"

@@ -20,6 +20,10 @@ ansible_tower_config:
           role: "admin"
           target_team: "sysops"
 
+        - team: "devops"
+          role: "admin"
+          target_team: "devops"
+
         - team: "secops"
           role: "admin"
           target_team: "secops"
@@ -39,6 +43,10 @@ ansible_tower_config:
         - team: "sysops"
           role: "admin"
           inventory: "sysops"
+
+        - team: "devops"
+          role: "admin"
+          inventory: "devops"
 
         - team: "secops"
           role: "admin"
@@ -80,21 +88,42 @@ ansible_tower_config:
           role: "use"
           credential: "empty-ssh"
 
+#### CLOUD
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-amazon-ec2"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-google-gce"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-microsoft-azure"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-openstack-xyz"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-vmware-xyz"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-cloudforms-xyz"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-tower-xyz"
+
 #### NXOS
         - team: "secops"
           role: "admin"
           credential: "network-nxos-ssh"
 
-        - team: "netops"
-          role: "use"
-          credential: "network-nxos-ssh"
-
         - team: "secops"
           role: "admin"
-          credential: "network-nxos-net"
-
-        - team: "netops"
-          role: "use"
           credential: "network-nxos-net"
 
 #### IOS
@@ -102,16 +131,8 @@ ansible_tower_config:
           role: "admin"
           credential: "network-ios-ssh"
 
-        - team: "netops"
-          role: "use"
-          credential: "network-ios-ssh"
-
         - team: "secops"
           role: "admin"
-          credential: "network-ios-net"
-
-        - team: "netops"
-          role: "use"
           credential: "network-ios-net"
 
 #### Linux
@@ -119,25 +140,9 @@ ansible_tower_config:
           role: "admin"
           credential: "system-linux-ssh"
 
-        - team: "sysops"
-          role: "use"
-          credential: "system-linux-ssh"
-
-        - team: "devops"
-          role: "use"
-          credential: "system-linux-ssh"
-
 #### Windows
         - team: "secops"
           role: "admin"
-          credential: "system-windows-winrm"
-
-        - team: "sysops"
-          role: "use"
-          credential: "system-windows-winrm"
-
-        - team: "devops"
-          role: "use"
           credential: "system-windows-winrm"
 
 ########################

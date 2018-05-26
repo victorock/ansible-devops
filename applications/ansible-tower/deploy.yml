@@ -1,7 +1,3 @@
-- name: "Deploy: Ansible Tower"
-  hosts: ansible-tower
-  gather_facts: yes
-  become: yes
-
-  roles:
-    - victorock.ansible-tower
+- include_tasks: deploy.tower-setup.yml
+- include_tasks: deploy.tower-config.yml
+- include_tasks: deploy.tower-facts.yml

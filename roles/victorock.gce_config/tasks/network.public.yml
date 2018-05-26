@@ -9,4 +9,4 @@
   loop_control:
     loop_var: public_dict
     label: "{{ public_dict.key }}"
-  when: cloud_network.public is mapping
+  when: cloud_network.public is defined

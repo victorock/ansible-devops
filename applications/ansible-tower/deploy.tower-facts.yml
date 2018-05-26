@@ -1,0 +1,9 @@
+- name: "Deploy: Ansible Tower Facts"
+  hosts: ansible-tower
+  gather_facts: yes
+  become: yes
+
+  tasks:
+    - name: "victorock.ansible-tower-facts"
+      include_role:
+        name: "victorock.ansible-tower-facts"
