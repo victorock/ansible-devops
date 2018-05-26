@@ -296,3 +296,69 @@ ansible_tower_config:
         - team: "netops"
           role: "admin"
           job_template: "4: f5-facts"
+
+###############################################
+###### Job_templates - SYSOPS
+###############################################
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-google-gce-instance"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-amazon-aws-instance"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-openstack-vm-instance"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-vmware-vm-instance"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux-baseline"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux-update"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux-service"
+
+###############################################
+###### Job_templates - DEVOPS
+###############################################
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-freeipa"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-ansible-tower"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-gitlab"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-jenkins"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-darkbulb-ios"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-darkbulb-nxos"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-darkbulb-eos"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-darkbulb-junos"
