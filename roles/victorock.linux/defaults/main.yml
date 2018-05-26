@@ -1,0 +1,5 @@
+linux_hostname: "{{ ansible_fqdn }}"
+linux_rhs: "no"
+linux_package: "yes"
+linux_update: "yes"
+linux_system: yes

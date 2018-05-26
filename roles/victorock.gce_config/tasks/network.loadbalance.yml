@@ -1,0 +1,12 @@
+- name: "cloud_network: Sanity checks"
+  import_tasks: "network/sanity.yml"
+
+- name: "cloud_network: Process element [ loadbalance ]"
+  include_tasks: "network/loadbalance.yml"
+  vars:
+    loadbalance: "{{ loadbalance_dict.value }}"
+  with_dict: "{{ cloud_network.loadbalance | default({}) }}"
+  loop_control:
+    loop_var: loadbalance_dict
+    label: "{{ loadbalance_dict.key }}"
+  when: cloud_network.loadbalance is mapping

@@ -1,0 +1,13 @@
+---
+- name: "RedHat: Ensure state of subscription to RHN"
+  redhat_subscription:
+    org_id: "{{ linux_rhs_org_id }}"
+    activationkey: "{{ linux_rhs_activationkey }}"
+    autosubscribe: "{{ linux_rhs_autosubscribe | default('yes') }}"
+    state: "{{ linux_rhs_state | default('present') }}"
+
+- name: "Configure state of repositories"
+  command: subscription-manager repos --enable={{ linux_rhs_repo|quote }}
+  with_items: "{{ linux_rhs_repos }}"
+  loop_control:
+    loop_var: linux_rhs_repo

@@ -1,0 +1,12 @@
+- name: "cloud_network: Sanity checks"
+  import_tasks: "network/sanity.yml"
+
+- name: "cloud_network: Process element [ dns ]"
+  include_tasks: "network/dns.yml"
+  vars:
+    cloud_network_dns: "{{ cloud_network_dns_dict.value }}"
+  with_dict: "{{ cloud_network.dns | default({}) }}"
+  loop_control:
+    loop_var: cloud_network_dns_dict
+    label: "{{ cloud_network_dns_dict.key }}"
+  when: cloud_network.dns is mapping

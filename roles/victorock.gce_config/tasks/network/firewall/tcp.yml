@@ -1,0 +1,8 @@
+- name: "cloud_network.firewall.rule.tcp: Ensure state of TCP rule [ {{ cloud_network_firewall.name }} ]"
+  gce_net:
+    project_id: "{{ cloud_network.project }}"
+    name: "{{ cloud_network_firewall.subnet }}"
+    fwname: "{{ cloud_network_firewall.name }}"
+    allowed: "{{ cloud_network_firewall.proto }}:{{ cloud_network_firewall.dst_port }}"
+    state: "{{ cloud_network_firewall.state | default(omit) }}"
+    src_range: "{{ cloud_network_firewall.src_cidr }}"

@@ -1,0 +1,8 @@
+- name: "cloud_network.firewall.rule.icmp: Ensure state of ICMP rule [ {{ cloud_network_firewall.name }} ]"
+  gce_net:
+    project_id: "{{ cloud_network.project }}"
+    name: "{{ cloud_network_firewall.subnet }}"
+    fwname: "{{ cloud_network_firewall.name }}"
+    allowed: "{{ cloud_network_firewall.proto }}"
+    state: "{{ cloud_network_firewall.state | default(omit) }}"
+    src_range: [ '{{ cloud_network_firewall.src_cidr }}' ]

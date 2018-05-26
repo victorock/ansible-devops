@@ -1,0 +1,34 @@
+#- name: "network.loadbalance.healtcheck: Ensure state of healthcheck [ {{ loadbalance.healthcheck.name }} ]"
+#  gcp_healthcheck:
+#    healthcheck_name: "{{ loadbalance.healthcheck.name }}"
+#    healthcheck_type: "{{ loadbalance.healthcheck.type }}"
+#    request_path: "{{ loadbalance.healthcheck.url | default(omit) }}"
+#    check_interval:  "{{ loadbalance.healthcheck.interval | default(omit) }}"
+#    timeout: "{{ loadbalance.healthcheck.timeout | default(omit) }}"
+#    unhealthy_threshold: "{{ loadbalance.healthcheck.threshold | default(omit) }}"
+#    healthy_threshold: "{{ loadbalance.healthcheck.threshold | default(omit) }}"
+#    state: "{{ loadbalance.healthcheck.state | default(omit) }}"
+
+- set_fact:
+    loadbalance_members: []
+
+- name: "cloud_network.loadbalance.members: Create list of region/members"
+  set_fact:
+    loadbalance_members: "{{ loadbalance_members }} + [ '{{ cloud_network.zone }}/{{ loadbalancer_member }}' ]"
+  loop: "{{ loadbalance.members }}"
+  loop_control:
+    loop_var: loadbalancer_member
+    label: "{{ loadbalancer_member }}"
+
+- name: "cloud_network.loadbalance: Ensure presence of loadbalance [ {{ loadbalance.name }} ]"
+  gce_lb:
+    name: "{{ loadbalance.name }}"
+    region: "{{ cloud_network.region }}"
+    external_ip: "{{ loadbalance.public | default(omit) }}"
+    port_range: "{{ loadbalance.port | default(omit) }}"
+    protocol: "{{ loadbalance.protocol | default(omit) }}"
+    members: "{{ loadbalance_members }}"
+    httphealthcheck_name: "{{ loadbalance.healthcheck.name }}"
+    httphealthcheck_path: "{{ loadbalance.healthcheck.url }}"
+    httphealthcheck_port: "{{ loadbalance.healthcheck.port }}"
+    state: "{{ loadbalance_members.state | default('present') }}"

@@ -1,0 +1,3 @@
+- import_tasks: "defaults/facts.yml"
+- import_tasks: "defaults/vars.yml"
+- import_tasks: "defaults/group_by.yml"

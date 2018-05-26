@@ -1,0 +1,11 @@
+- name: "cloud_network.public: Ensure state of Public IP [ {{ public.name }} ]"
+  gce_eip:
+    project_id: "{{ cloud_network.project }}"
+    region: "{{ cloud_network.region }}"
+    name: "{{ public.name }}"
+    state: "{{ public.state | default(omit) }}"
+  register: cloud_network_facts_public
+
+- name: "cloud_network.public: Set cloud_network_facts.public[ {{ public.name }} ]"
+  set_fact:
+    cloud_network_facts: "{{ cloud_network_facts | combine({ 'public': { public.name: cloud_network_facts_public } }) }}"

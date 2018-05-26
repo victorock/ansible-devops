@@ -1,2 +1,2 @@
-- include: provision.yml
-- include: deploy.yml
+- import_playbook: provision.yml
+- import_playbook: deploy.yml

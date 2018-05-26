@@ -1,0 +1,10 @@
+# Ansible Keychain
+keychain/*
+*.retry
+roles/*
+
+# Vagrant
+.vagrant
+
+# Mac
+.DS_Store

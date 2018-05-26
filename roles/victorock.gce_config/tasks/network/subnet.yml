@@ -1,0 +1,9 @@
+- name: "cloud_network.subnet: Ensure state of network subnet [ {{ cloud_network_subnet.name }} ]"
+  gce_net:
+    project_id: "{{ cloud_network.project }}"
+    subnet_region: "{{ cloud_network.region }}"
+    name: "{{ cloud_network_subnet.name }}"
+    subnet_name: "{{ cloud_network_subnet.name }}"
+    ipv4_range: "{{ cloud_network_subnet.cidr }}"
+    mode: "{{ cloud_network_subnet.mode | default('legacy') }}"
+    state: "{{ cloud_network_subnet.state | default(omit) }}"

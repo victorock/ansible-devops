@@ -1,0 +1,3 @@
+- name: "cloud_network: Combine cloud_provider in cloud_network"
+  set_fact:
+    cloud_network: "{{ cloud_network | combine(cloud_provider) }}"

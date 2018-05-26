@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Victor da Costa
+  description: Baseline OS - Linux
+  license: GPLv3
+  min_ansible_version: 2.4
+  platforms:
+  - name: EL
+    versions:
+      - 7
+  galaxy_tags:
+    - linux
+    - common
+
+dependencies: []

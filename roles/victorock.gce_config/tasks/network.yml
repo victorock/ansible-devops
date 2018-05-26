@@ -1,0 +1,5 @@
+- import_tasks: network.subnet.yml
+- import_tasks: network.firewall.yml
+- import_tasks: network.public.yml
+- import_tasks: network.dns.yml
+- import_tasks: network.loadbalance.yml

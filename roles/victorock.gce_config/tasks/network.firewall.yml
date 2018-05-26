@@ -1,0 +1,12 @@
+- name: "cloud_network: Sanity checks"
+  import_tasks: "network/sanity.yml"
+
+- name: "cloud_network: Process element [ firewall ]"
+  include_tasks: "network/firewall.yml"
+  vars:
+    cloud_network_firewall: "{{ cloud_network_firewall_dict.value }}"
+  with_dict: "{{ cloud_network.firewall | default({}) }}"
+  loop_control:
+    loop_var: cloud_network_firewall_dict
+    label: "{{ cloud_network_firewall_dict.key }}"
+  when: cloud_network.firewall is mapping

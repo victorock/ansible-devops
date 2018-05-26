@@ -1,0 +1,20 @@
+- name: Import variables specific to distribution
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "vars/{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+    - "vars/{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+    - "vars/{{ ansible_distribution }}.yml"
+    - "vars/default.yml"
+
+- name: Backup IPA default.conf
+  ipafstore:
+    backup: "{{ ipaconf_default_conf }}"
+
+- name: Template IPA default.conf
+  template:
+    src: ipa.conf.j2
+    dest: "{{ ipaconf_default_conf }}"
+    backup: yes
+    owner: root
+    group: root
+    mode: 0644

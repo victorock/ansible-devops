@@ -1,0 +1,9 @@
+- name: "Configure hostname"
+  hostname:
+    name: "{{ linux_hostname }}"
+
+- name: "Configure /etc/hosts"
+  lineinfile:
+    path: /etc/hosts
+    regexp: '^{{ ansible_default_ipv4.address }}'
+    line: '{{ ansible_default_ipv4.address }} {{ linux_hostname }} {{ inventory_hostname }} # Added by Ansible'
