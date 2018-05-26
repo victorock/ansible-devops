@@ -11,7 +11,8 @@ ansible_tower_config:
           scm_credential: "empty-scm"
           scm_type: "git"
           scm_branch: "dev"
-          scm_update_on_launch: true
+          scm_clean: true
+          scm_update_on_launch: false
           scm_url: "https://github.com/victorock/ansible-netops"
 
 ########################################################################
@@ -22,7 +23,8 @@ ansible_tower_config:
           scm_credential: "empty-scm"
           scm_type: "git"
           scm_branch: "dev"
-          scm_update_on_launch: true
+          scm_clean: true
+          scm_update_on_launch: false
           scm_url: "https://github.com/victorock/ansible-devops"
 
 ########################################################################
@@ -33,7 +35,8 @@ ansible_tower_config:
           scm_credential: "empty-scm"
           scm_type: "git"
           scm_branch: "dev"
-          scm_update_on_launch: true
+          scm_clean: true
+          scm_update_on_launch: false
           scm_url: "https://github.com/victorock/ansible-sysops"
 
 ########################################################################
@@ -44,7 +47,8 @@ ansible_tower_config:
           scm_credential: "empty-scm"
           scm_type: "git"
           scm_branch: "dev"
-          scm_update_on_launch: true
+          scm_clean: true
+          scm_update_on_launch: false
           scm_url: "https://github.com/victorock/ansible-secops"
 
 ########################################################################
@@ -55,7 +59,8 @@ ansible_tower_config:
           scm_credential: "empty-scm"
           scm_type: "git"
           scm_branch: "master"
-          scm_update_on_launch: true
+          scm_clean: true
+          scm_update_on_launch: false
           scm_url: "https://github.com/network-automation/linklight"
 
 ########################################################################
@@ -66,7 +71,8 @@ ansible_tower_config:
           scm_credential: "empty-scm"
           scm_type: "git"
           scm_branch: "master"
-          scm_update_on_launch: true
+          scm_clean: true
+          scm_update_on_launch: false
           scm_url: "https://github.com/network-automation/an-demos"
 
 ########################################################################
@@ -77,5 +83,6 @@ ansible_tower_config:
           scm_credential: "empty-scm"
           scm_type: "git"
           scm_branch: "master"
-          scm_update_on_launch: true
+          scm_clean: true
+          scm_update_on_launch: false
           scm_url: "https://github.com/ansible/lightbulb"

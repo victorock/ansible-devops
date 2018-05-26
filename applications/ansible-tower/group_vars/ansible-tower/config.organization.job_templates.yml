@@ -14,7 +14,7 @@ ansible_tower_config:
           forks: 50
           limit: "nxos"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_banner"
           description: "Dev: nxos_banner"
@@ -24,7 +24,7 @@ ansible_tower_config:
           forks: 50
           limit: "nxos"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_feature"
           description: "Dev: nxos_feature"
@@ -34,7 +34,7 @@ ansible_tower_config:
           forks: 50
           limit: "nxos"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_vlan"
           description: "Dev: nxos_vlan"
@@ -45,7 +45,7 @@ ansible_tower_config:
           limit: "nxos"
           machine_credential: "empty-ssh"
           ask_extra_vars: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_switchport"
           description: "Dev: nxos_switchport"
@@ -56,7 +56,7 @@ ansible_tower_config:
           limit: "nxos"
           machine_credential: "empty-ssh"
           ask_extra_vars: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_running_config"
           description: "Dev: nxos_running_config"
@@ -66,7 +66,7 @@ ansible_tower_config:
           forks: 50
           limit: "nxos"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_tech_support"
           description: "Dev: nxos_tech_support"
@@ -77,7 +77,7 @@ ansible_tower_config:
           limit: "nxos"
           machine_credential: "empty-ssh"
 #          ask_limit_on_launch: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_spanning_tree"
           description: "Dev: nxos_spanning_tree"
@@ -88,7 +88,7 @@ ansible_tower_config:
           limit: "nxos"
           machine_credential: "empty-ssh"
 #          ask_limit_on_launch: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_arp"
           description: "Dev: nxos_arp"
@@ -99,7 +99,7 @@ ansible_tower_config:
           limit: "nxos"
           machine_credential: "empty-ssh"
 #          ask_limit_on_launch: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_version"
           description: "Dev: nxos_version"
@@ -110,7 +110,7 @@ ansible_tower_config:
           limit: "nxos"
           machine_credential: "empty-ssh"
 #          ask_limit_on_launch: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_cloud"
           description: "Dev: nxos_cloud"
@@ -121,7 +121,7 @@ ansible_tower_config:
           limit: "nxos"
           machine_credential: "empty-ssh"
 #          ask_limit_on_launch: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_cloud_pod01"
           description: "Dev: nxos_cloud_pod01"
@@ -131,7 +131,7 @@ ansible_tower_config:
           forks: 50
           limit: "nxos:&pod01"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_cloud_pod02"
           description: "Dev: nxos_cloud_pod02"
@@ -141,7 +141,7 @@ ansible_tower_config:
           forks: 50
           limit: "nxos:&pod01"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_fabric"
           description: "Dev: nxos_fabric"
@@ -152,7 +152,7 @@ ansible_tower_config:
           limit: "nxos"
           machine_credential: "empty-ssh"
 #          ask_limit_on_launch: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_fabric_spine"
           description: "Dev: nxos_fabric_spine"
@@ -162,7 +162,7 @@ ansible_tower_config:
           forks: 50
           limit: "nxos:&spine"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: nxos_fabric_leaf"
           description: "Dev: nxos_fabric_leaf"
@@ -172,7 +172,7 @@ ansible_tower_config:
           forks: 50
           limit: "nxos:&leaf"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
 ########################################################################
 #                           Netops - IOS                              #
@@ -186,7 +186,7 @@ ansible_tower_config:
           limit: "ios"
           machine_credential: "empty-ssh"
 #          ask_limit_on_launch: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: ios_banner"
           description: "Dev: ios_banner"
@@ -197,7 +197,7 @@ ansible_tower_config:
           limit: "ios"
           machine_credential: "empty-ssh"
 #          ask_limit_on_launch: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: ios_vlan"
           description: "Dev: ios_vlan"
@@ -208,7 +208,7 @@ ansible_tower_config:
           limit: "ios"
           machine_credential: "empty-ssh"
           ask_extra_vars: true
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: ios_running_config"
           description: "Dev: ios_running_config"
@@ -218,7 +218,7 @@ ansible_tower_config:
           forks: 50
           limit: "ios"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: ios_tech_support"
           description: "Dev: ios_tech_support"
@@ -228,7 +228,7 @@ ansible_tower_config:
           forks: 50
           limit: "ios"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: ios_spanning_tree"
           description: "Dev: ios_spanning_tree"
@@ -238,7 +238,7 @@ ansible_tower_config:
           forks: 50
           limit: "ios"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: ios_arp"
           description: "Dev: ios_arp"
@@ -248,7 +248,7 @@ ansible_tower_config:
           forks: 50
           limit: "ios"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "Dev: ios_version"
           description: "Dev: ios_version"
@@ -258,7 +258,7 @@ ansible_tower_config:
           forks: 50
           limit: "ios"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
 ########################################################################
 #                     Netops - F5                                      #
@@ -275,7 +275,7 @@ ansible_tower_config:
           forks: 50
           limit: "tmos"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
 ########################################################################
 #                     Netops - F5 - f5_system                          #
@@ -288,7 +288,7 @@ ansible_tower_config:
           forks: 50
           limit: "tmos"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
 ########################################################################
 #                     Netops - F5 - f5_vserver                          #
@@ -301,7 +301,7 @@ ansible_tower_config:
           forks: 50
           limit: "tmos"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
 ########################################################################
 #                     Netops - F5 - f5_facts                          #
@@ -314,7 +314,7 @@ ansible_tower_config:
           forks: 50
           limit: "tmos"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
 ########################################################################
 #                           Sysops - Lightbulb                         #
@@ -327,7 +327,87 @@ ansible_tower_config:
           forks: 50
           limit: "web"
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
+
+########################################################################
+#                           Sysops - Playbooks                         #
+########################################################################
+        - name: "sysops-google-gce-instance"
+          description: "sysops-google-gce-instance"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/playbooks/create_instance_gce.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: ""
+          machine_credential: "empty-ssh"
+          ask_extra_vars: true
+          ask_credential: true
+
+        - name: "sysops-amazon-aws-instance"
+          description: "sysops-amazon-aws-instance"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/playbooks/create_instance_aws.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: ""
+          machine_credential: "empty-ssh"
+          ask_extra_vars: true
+          ask_credential: true
+
+        - name: "sysops-openstack-vm-instance"
+          description: "sysops-openstack-nova-instance"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/playbooks/create_instance_openstack.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: ""
+          machine_credential: "empty-ssh"
+          ask_extra_vars: true
+          ask_credential: true
+
+        - name: "sysops-vmware-vm-instance"
+          description: "sysops-vmware-vcenter-instance"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/playbooks/create_instance_vmware.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: ""
+          machine_credential: "empty-ssh"
+          ask_extra_vars: true
+          ask_credential: true
+
+        - name: "sysops-linux-baseline"
+          description: "sysops-linux-baseline"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/playbooks/linux_baseline_role.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: "changeme"
+          machine_credential: "empty-ssh"
+          ask_extra_vars: true
+          ask_credential: true
+
+        - name: "sysops-linux-update"
+          description: "sysops-linux-update"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/playbooks/linux_update_role.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: "changeme"
+          machine_credential: "empty-ssh"
+          ask_extra_vars: true
+          ask_credential: true
+
+        - name: "sysops-linux-service"
+          description: "sysops-linux-service"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/playbooks/service.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: "changeme"
+          machine_credential: "empty-ssh"
+          ask_extra_vars: true
+          ask_credential: true
 
 ########################################################################
 #                           Devops - Applications                      #
@@ -339,7 +419,7 @@ ansible_tower_config:
           inventory: "devops"
           forks: 50
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "devops-application-ansible-tower"
           description: "devops-application-ansible-tower"
@@ -348,7 +428,7 @@ ansible_tower_config:
           inventory: "devops"
           forks: 50
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "devops-application-jenkins"
           description: "devops-application-jenkins"
@@ -357,7 +437,7 @@ ansible_tower_config:
           inventory: "devops"
           forks: 50
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "devops-application-gitlab"
           description: "devops-application-gitlab"
@@ -366,7 +446,7 @@ ansible_tower_config:
           inventory: "devops"
           forks: 50
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "devops-application-darkbulb-ios"
           description: "devops-application-darkbulb-ios"
@@ -375,7 +455,7 @@ ansible_tower_config:
           inventory: "devops"
           forks: 50
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "devops-application-darkbulb-nxos"
           description: "devops-application-darkbulb-nxos"
@@ -384,7 +464,7 @@ ansible_tower_config:
           inventory: "devops"
           forks: 50
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "devops-application-darkbulb-eos"
           description: "devops-application-darkbulb-eos"
@@ -393,7 +473,7 @@ ansible_tower_config:
           inventory: "devops"
           forks: 50
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
 
         - name: "devops-application-darkbulb-junos"
           description: "devops-application-darkbulb-junos"
@@ -402,4 +482,4 @@ ansible_tower_config:
           inventory: "devops"
           forks: 50
           machine_credential: "empty-ssh"
-          ask_credential: "yes"
+          ask_credential: true
