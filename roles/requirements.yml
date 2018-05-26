@@ -1,4 +1,5 @@
 - name: geerlingguy.jenkins
+- name: geerlingguy.gitlab
 
 - src: https://github.com/victorock/ansible-role-linux.git
   scm: git
