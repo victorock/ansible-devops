@@ -10,3 +10,23 @@
   scm: git
   version: dev
   name: victorock.gce_config
+
+- src: https://github.com/victorock/ansible-role-ipa.git
+  scm: git
+  version: dev
+  name: victorock.ipa
+
+- src: https://github.com/victorock/ansible-role-ipaconf.git
+  scm: git
+  version: dev
+  name: victorock.ipaconf
+
+- src: https://github.com/victorock/ansible-role-ipaclient.git
+  scm: git
+  version: dev
+  name: victorock.ipaclient
+
+- src: https://github.com/victorock/ansible-role-ipaserver.git
+  scm: git
+  version: dev
+  name: victorock.ipaserver
