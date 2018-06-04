@@ -1,6 +1,6 @@
 ---
 - name: "Provision Instances"
-  hosts: gce_config
+  hosts: gce
   connection: local
   gather_facts: false
   become: false
