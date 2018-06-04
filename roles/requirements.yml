@@ -12,6 +12,13 @@
 
 - name: geerlingguy.docker
 
+- name: victorock.security
+
+- src: https://github.com/victorock/ansible-role-awx.git
+  scm: git
+  version: victorock-galaxy-dependencies
+  name: geerlingguy.awx
+
 - src: https://github.com/victorock/ansible-role-linux.git
   scm: git
   version: dev
@@ -61,8 +68,3 @@
   scm: git
   version: dev
   name: victorock.ansible-tower-config
-
-- src: https://github.com/victorock/ansible-role-gce-config.git
-  scm: git
-  version: dev
-  name: victorock.gce_config
