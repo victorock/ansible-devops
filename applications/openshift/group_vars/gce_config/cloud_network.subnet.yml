@@ -1,5 +1,0 @@
-cloud_network:
-  subnet:
-    devops-victorock-io:
-      name: devops-victorock-io
-      cidr: "{{ cloud_provider.cidr | ipsubnet(24, 1) }}"

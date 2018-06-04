@@ -1,4 +1,0 @@
-cloud_network:
-  public:
-    awx-devops-victorock-io:
-      name: awx-devops-victorock-io
