@@ -1,3 +1,0 @@
-- name: "Gather Ansible Facts"
-  setup:
-  when: ansible_os_family is not defined

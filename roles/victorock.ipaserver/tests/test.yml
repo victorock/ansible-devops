@@ -1,9 +1,0 @@
----
-- hosts: localhost
-  remote_user: root
-
-  vars:
-    test: yes
-
-  roles:
-    - ansible-role-ipaserver

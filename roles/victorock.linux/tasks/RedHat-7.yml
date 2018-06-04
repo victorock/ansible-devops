@@ -1,9 +1,0 @@
----
-- import_tasks: "RedHat-7/rhs.yml"
-  when: linux_rhs|bool
-
-- import_tasks: "RedHat-7/package.yml"
-  when: linux_package|bool
-
-- import_tasks: "RedHat-7/system.yml"
-  when: linux_system|bool

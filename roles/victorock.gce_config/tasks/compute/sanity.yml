@@ -1,3 +1,0 @@
-- name: "cloud_compute: Combine cloud_provider in cloud_compute"
-  set_fact:
-    cloud_compute: "{{ cloud_compute | combine( cloud_provider ) }}"

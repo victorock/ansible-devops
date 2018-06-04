@@ -1,8 +1,0 @@
----
-- hosts: localhost
-  connection: local
-
-  tasks:
-    - include_role:
-        name: victorock.gce_config
-        tasks_from: run
