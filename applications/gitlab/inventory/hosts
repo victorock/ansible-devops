@@ -1,11 +1,16 @@
 [all:children]
-gce_config
+gce
 gitlab
+gitlab-runner
 
-[gce_config]
+[gce]
 localhost
 
 [gitlab:children]
 tag_gitlab
 
+[gitlab-runner:children]
+tag_gitlab-runner
+
 [tag_gitlab]
+[tag_gitlab-runner]

@@ -1,0 +1,2 @@
+linux_additional_packages:
+  - "@Development Tools"

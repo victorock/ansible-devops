@@ -1,9 +1,0 @@
-- name: "Deploy: Ansible Tower Setup"
-  hosts: ansible-tower
-  gather_facts: yes
-  become: yes
-
-  tasks:
-    - name: "victorock.ansible-tower-setup"
-      include_role:
-        name: "victorock.ansible-tower-setup"

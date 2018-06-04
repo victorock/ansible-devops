@@ -1,0 +1,2 @@
+darkbulb_topology_config:
+  image: "vEOS-4.18.1F.qcow2"

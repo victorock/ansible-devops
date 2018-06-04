@@ -1,0 +1,4 @@
+darkbulb_topology_compute:
+  domain:
+    devices:
+      interface:  "{{ domain_device_interface }}"

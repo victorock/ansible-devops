@@ -1,8 +1,8 @@
 [all:children]
-gce_config
+gce
 jenkins
 
-[gce_config]
+[gce]
 localhost
 
 [jenkins:children]

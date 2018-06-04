@@ -1,0 +1,52 @@
+domain_device_interface:
+  -   '@type': network
+      mac:
+          '@address': 52:54:00:b3:01:10
+      model:
+          '@type': e1000
+      source:
+          '@network': darkbulb
+  -   '@type': udp
+      model:
+          '@type': e1000
+      source:
+          '@address': 127.0.0.1
+          '@port': '21001'
+          local:
+              '@address': 127.0.0.1
+              '@port': '11001'
+      target:
+          '@dev': gig01
+  -   '@type': udp
+      model:
+          '@type': e1000
+      source:
+          '@address': 127.0.0.1
+          '@port': '22001'
+          local:
+              '@address': 127.0.0.1
+              '@port': '11002'
+      target:
+          '@dev': gig02
+  -   '@type': udp
+      model:
+          '@type': e1000
+      source:
+          '@address': 127.0.0.1
+          '@port': '23001'
+          local:
+              '@address': 127.0.0.1
+              '@port': '11003'
+      target:
+          '@dev': gig03
+  -   '@type': udp
+      model:
+          '@type': e1000
+      source:
+          '@address': 127.0.0.1
+          '@port': '24001'
+          local:
+              '@address': 127.0.0.1
+              '@port': '11004'
+      target:
+          '@dev': gig04

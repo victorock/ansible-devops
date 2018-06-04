@@ -1,0 +1,6 @@
+mysql_databases:
+  - name: artifactory
+
+mysql_users:
+  - name: artifactory
+    password: "artifactory"

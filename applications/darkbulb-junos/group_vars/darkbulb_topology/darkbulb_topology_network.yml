@@ -1,0 +1,17 @@
+darkbulb_topology_network:
+  ios:
+    network:
+      '@ipv6':              'yes'
+      bridge:
+          '@delay':         '0'
+          '@stp':           'on'
+      forward:
+          '@mode':          nat
+      ip:
+          '@address':       192.168.10.1
+          '@netmask':       255.255.255.0
+          dhcp:
+              range:
+                  '@end':   192.168.10.254
+                  '@start': 192.168.10.1
+      name:                 darkbulb

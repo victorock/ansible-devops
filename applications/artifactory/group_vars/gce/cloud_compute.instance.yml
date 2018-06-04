@@ -1,0 +1,18 @@
+cloud_compute:
+  instance:
+    artifactory:
+      name: artifactory
+      size: n1-standard-1
+      image: rhel-7
+      boot:
+        size: 60
+        persistent: yes
+      credential:
+        username: jdacosta
+        key: artifactory-devops-victorock-io
+      network:
+        subnet: devops-victorock-io
+        public: artifactory-devops-victorock-io
+      tags:
+        - artifactory
+        - devops

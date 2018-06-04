@@ -1,0 +1,4 @@
+cloud_network:
+  public:
+    artifactory-devops-victorock-io:
+      name: artifactory-devops-victorock-io

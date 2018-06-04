@@ -1,11 +1,19 @@
 [all:children]
 gce_config
-darkbulb-junos
+darkbulb
+darkbulb_topology
 
 [gce_config]
 localhost
 
-[darkbulb-junos:children]
-tag_darkbulb-junos
+[darkbulb:children]
+tag_darkbulb
 
-[tag_darkbulb-junos]
+[tag_darkbulb]
+[darkbulb_topology]
+leaf01
+leaf02
+leaf03
+leaf04
+spine01
+spine02

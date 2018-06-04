@@ -1,12 +1,29 @@
-java_packages:
-  - java-1.8.0
-jenkins_version: "2.118"
+jenkins_admin_username: "admin"
+jenkins_admin_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          37303561393830636663616265646338356234393031323465643434326236303165383331613865
+          6236326333316234613930663432393532343436666238330a633862323165636330303431303035
+          39653237303233363338613866323134313336663138363065396266636637613861386434313131
+          6332346265626432640a363562333532616465396262343262326333303930636466663863313465
+          6264
+jenkins_version: "2.107"
 jenkins_plugin_timeout: 120
+jenkins_http_port: 8080
 jenkins_plugins:
+  - pipeline-utility-steps
   - blueocean
   - ansible
   - ansible-tower
   - greenballs
+  - credentials-binding
+  - credentials
+  - plain-credentials
   - workflow-aggregator
   - copyartifact
   - m2release
+  - artifactory
+  - maven-plugin
+  - github
+  - git
+  - gitlab
+  - pipeline-maven

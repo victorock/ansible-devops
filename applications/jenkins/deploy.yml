@@ -4,12 +4,44 @@
   become: true
   gather_facts: true
 
-  tasks:
-    - name: "victorock.linux"
-      include_role:
-        name: victorock.linux
-        tasks_from: run
+  pre_tasks:
+    - name: "Ensure state of selinux to allow httpd to connect to the network"
+      seboolean:
+        name: "{{ weberserver_seboolean }}"
+        persistent: yes
+        state: yes
+      loop:
+        - httpd_can_network_connect
+        - httpd_can_network_connect_db
+      loop_control:
+        loop_var: weberserver_seboolean
 
-    - name: "geerlingguy.jenkins"
-      include_role:
-        name: geerlingguy.jenkins
+    - name: "Ensure state of webserver ports"
+      firewalld:
+        port: "{{ webserver_port }}"
+        zone: public
+        permanent: yes
+        immediate: true
+        state: enabled
+      loop:
+        - 80/tcp
+        - 443/tcp
+      loop_control:
+        loop_var: webserver_port
+
+  roles:
+    - role: victorock.linux
+      autorun: yes
+      become: yes
+
+    - role: geerlingguy.java
+      become: yes
+
+    - role: geerlingguy.jenkins
+      become: yes
+
+    - role: geerlingguy.nginx
+      become: yes
+
+    - role: geerlingguy.pip
+      become: yes

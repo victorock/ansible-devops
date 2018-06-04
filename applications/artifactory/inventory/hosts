@@ -1,0 +1,11 @@
+[all:children]
+gce
+artifactory
+
+[gce]
+localhost
+
+[artifactory:children]
+tag_artifactory
+
+[tag_artifactory]

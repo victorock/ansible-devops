@@ -44,7 +44,8 @@ ansible_tower_config:
           forks: 50
           limit: "nxos"
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
         - name: "Dev: nxos_switchport"
@@ -55,7 +56,8 @@ ansible_tower_config:
           forks: 50
           limit: "nxos"
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
         - name: "Dev: nxos_running_config"
@@ -207,7 +209,8 @@ ansible_tower_config:
           forks: 50
           limit: "ios"
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
         - name: "Dev: ios_running_config"
@@ -332,7 +335,7 @@ ansible_tower_config:
 ########################################################################
 #                           Sysops - Playbooks                         #
 ########################################################################
-        - name: "sysops-google-gce-instance"
+        - name: "sysops-google-gce: instance"
           description: "sysops-google-gce-instance"
           project: "Dev: victorock-ansible-sysops"
           playbook: "linux/playbooks/create_instance_gce.yml"
@@ -340,10 +343,11 @@ ansible_tower_config:
           forks: 50
           limit: ""
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
-        - name: "sysops-amazon-aws-instance"
+        - name: "sysops-amazon-aws: instance"
           description: "sysops-amazon-aws-instance"
           project: "Dev: victorock-ansible-sysops"
           playbook: "linux/playbooks/create_instance_aws.yml"
@@ -351,10 +355,11 @@ ansible_tower_config:
           forks: 50
           limit: ""
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
-        - name: "sysops-openstack-vm-instance"
+        - name: "sysops-openstack-nova: instance"
           description: "sysops-openstack-nova-instance"
           project: "Dev: victorock-ansible-sysops"
           playbook: "linux/playbooks/create_instance_openstack.yml"
@@ -362,10 +367,11 @@ ansible_tower_config:
           forks: 50
           limit: ""
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
-        - name: "sysops-vmware-vm-instance"
+        - name: "sysops-vmware-vcenter: instance"
           description: "sysops-vmware-vcenter-instance"
           project: "Dev: victorock-ansible-sysops"
           playbook: "linux/playbooks/create_instance_vmware.yml"
@@ -373,10 +379,11 @@ ansible_tower_config:
           forks: 50
           limit: ""
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
-        - name: "sysops-linux-baseline"
+        - name: "sysops-linux: baseline"
           description: "sysops-linux-baseline"
           project: "Dev: victorock-ansible-sysops"
           playbook: "linux/playbooks/linux_baseline_role.yml"
@@ -384,10 +391,11 @@ ansible_tower_config:
           forks: 50
           limit: "changeme"
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
-        - name: "sysops-linux-update"
+        - name: "sysops-linux: update"
           description: "sysops-linux-update"
           project: "Dev: victorock-ansible-sysops"
           playbook: "linux/playbooks/linux_update_role.yml"
@@ -395,10 +403,12 @@ ansible_tower_config:
           forks: 50
           limit: "changeme"
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
-        - name: "sysops-linux-service"
+        - name: "sysops-linux: service"
           description: "sysops-linux-service"
           project: "Dev: victorock-ansible-sysops"
           playbook: "linux/playbooks/service.yml"
@@ -406,7 +416,44 @@ ansible_tower_config:
           forks: 50
           limit: "changeme"
           machine_credential: "empty-ssh"
-          ask_extra_vars: true
+          become_enabled: true
+          ask_extra_vars: false
+          ask_credential: true
+
+        - name: "sysops-linux-webaas: apache"
+          description: "sysops-linux-webaas-apache"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/applications/WEBaaS/apache.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: "web"
+          machine_credential: "empty-ssh"
+          become_enabled: true
+          ask_extra_vars: false
+          ask_credential: true
+
+        - name: "sysops-linux-dbaas: mariadb"
+          description: "sysops-linux-dbaas-apache"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/applications/DBaaS/mariadb.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: "database"
+          machine_credential: "empty-ssh"
+          become_enabled: true
+          ask_extra_vars: false
+          ask_credential: true
+
+        - name: "sysops-linux-application: website"
+          description: "sysops-linux-application-website"
+          project: "Dev: victorock-ansible-sysops"
+          playbook: "linux/applications/website/website.yml"
+          inventory: "sysops"
+          forks: 50
+          limit: "website"
+          machine_credential: "empty-ssh"
+          become_enabled: true
+          ask_extra_vars: false
           ask_credential: true
 
 ########################################################################

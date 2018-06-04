@@ -1,0 +1,2 @@
+darkbulb_topology_config:
+  image: "junos.qcow2"

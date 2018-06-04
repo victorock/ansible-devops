@@ -1,4 +1,3 @@
-
 - name: "Deploy Darkbulb for EOS"
   hosts: darkbulb-eos
   become: true
@@ -7,4 +6,18 @@
     - name: "victorock.darkbulb"
       include_role:
         name: "victorock.darkbulb"
+        tasks_from: run
+
+- name: "Deploy Darkbulb Topology"
+  hosts: darkbulb_topology
+  become: true
+  # Hack to avoid race-condition when running multi-node topology in a single host
+  # Avoids race-condition in libvirt when setting up common resources
+  serial:
+  - 1
+
+  tasks:
+    - name: "victorock.darkbulb-topology"
+      include_role:
+        name: "victorock.darkbulb-topology"
         tasks_from: run

@@ -35,6 +35,14 @@ ansible_tower_config:
           superuser: false
           auditor: false
 
+        - name: "appops"
+          password: "appops"
+          email: "appops@acme.com"
+          first_name: "Application"
+          last_name: "Operations"
+          superuser: false
+          auditor: false
+
         - name: "secops"
           password: "secops"
           email: "secops@acme.com"

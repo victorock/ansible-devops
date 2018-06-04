@@ -1,0 +1,7 @@
+darkbulb_topology_storagepool:
+  ios:
+    pool:
+      '@type':  dir
+      name:     default
+      target:
+        path: /var/lib/libvirt/images

@@ -16,5 +16,4 @@ cloud_compute:
       storage:
         data: darkbulb-junos-devops-victorock-io
       tags:
-        - darkbulb-junos
         - darkbulb

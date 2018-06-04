@@ -1,0 +1,2 @@
+darkbulb_topology_config:
+  image: "nxosv-final.7.0.3.I6.1.qcow2"

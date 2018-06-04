@@ -1,11 +1,19 @@
 [all:children]
 gce_config
-darkbulb-nxos
+darkbulb
+darkbulb_topology
 
 [gce_config]
 localhost
 
-[darkbulb-nxos:children]
-tag_darkbulb-nxos
+[darkbulb:children]
+tag_darkbulb
 
-[tag_darkbulb-nxos]
+[tag_darkbulb]
+[darkbulb_topology]
+leaf01
+leaf02
+leaf03
+leaf04
+spine01
+spine02

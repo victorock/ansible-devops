@@ -1,6 +1,0 @@
-libvirt_storage:
-  pool:
-    darkbulb:
-      name: darkbulb
-      type: dir
-      target: /home/darkbulb/images/qcow2

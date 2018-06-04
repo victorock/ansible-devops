@@ -16,5 +16,4 @@ cloud_compute:
       storage:
         data: darkbulb-nxos-devops-victorock-io
       tags:
-        - darkbulb-nxos
         - darkbulb

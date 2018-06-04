@@ -1,0 +1,2 @@
+ansible_network_os:             "ios"
+ansible_host:                   "darkbulb-{{ ansible_network_os }}.devops.victorock.io"

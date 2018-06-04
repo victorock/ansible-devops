@@ -1,0 +1,8 @@
+gitlab_runner_description: 'GitLab Runner'
+gitlab_runner_coordinator_url: "https://gitlab.devops.victorock.io"
+gitlab_runner_registration_token: "s43Mj8xxefFCtAzpoLhR"
+gitlab_runner_executor: docker
+gitlab_runner_docker_image: "maven:latest"
+gitlab_runner_docker_volumes:
+  - "/var/run/docker.sock:/var/run/docker.sock"
+  - "/cache"

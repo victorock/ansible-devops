@@ -16,5 +16,4 @@ cloud_compute:
       storage:
         data: darkbulb-ios-devops-victorock-io
       tags:
-        - darkbulb-ios
         - darkbulb

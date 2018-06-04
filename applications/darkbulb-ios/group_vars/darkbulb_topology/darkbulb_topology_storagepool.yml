@@ -1,0 +1,6 @@
+darkbulb_topology_storagepool:
+  pool:
+    '@type':  dir
+    name:     default
+    target:
+      path: /var/lib/libvirt/images

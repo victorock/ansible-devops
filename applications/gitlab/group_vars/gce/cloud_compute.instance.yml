@@ -1,0 +1,32 @@
+cloud_compute:
+  instance:
+    gitlab:
+      name: gitlab
+      size: n1-standard-1
+      image: rhel-7
+      boot:
+        size: 60
+        persistent: true
+      credential:
+        username: jdacosta
+        key: gitlab-devops-victorock-io
+      network:
+        subnet: devops-victorock-io
+        public: gitlab-devops-victorock-io
+      tags:
+        - gitlab
+
+    grunner01:
+      name: grunner01
+      size: n1-standard-1
+      image: centos-7
+      boot:
+        size: 30
+        persistent: false
+      credential:
+        username: jdacosta
+        key: grunner01-devops-victorock-io
+      network:
+        subnet: devops-victorock-io
+      tags:
+        - gitlab-runner

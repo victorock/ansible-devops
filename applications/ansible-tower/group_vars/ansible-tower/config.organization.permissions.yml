@@ -40,17 +40,34 @@ ansible_tower_config:
           role: "admin"
           inventory: "netops"
 
+        - team: "netops"
+          role: "update"
+          inventory: "netops"
+
         - team: "sysops"
           role: "admin"
+          inventory: "sysops"
+
+        - team: "sysops"
+          role: "update"
           inventory: "sysops"
 
         - team: "devops"
           role: "admin"
           inventory: "devops"
 
+        - team: "devops"
+          role: "update"
+          inventory: "devops"
+
         - team: "secops"
           role: "admin"
           inventory: "secops"
+
+        - team: "secops"
+          role: "update"
+          inventory: "secops"
+
 
 ########################
 ###### Credentials
@@ -302,31 +319,44 @@ ansible_tower_config:
 ###############################################
         - team: "sysops"
           role: "admin"
-          job_template: "sysops-google-gce-instance"
+          job_template: "sysops-google-gce: instance"
 
         - team: "sysops"
           role: "admin"
-          job_template: "sysops-amazon-aws-instance"
+          job_template: "sysops-amazon-aws: instance"
 
         - team: "sysops"
           role: "admin"
-          job_template: "sysops-openstack-vm-instance"
+          job_template: "sysops-openstack-nova: instance"
 
         - team: "sysops"
           role: "admin"
-          job_template: "sysops-vmware-vm-instance"
+          job_template: "sysops-vmware-vcenter: instance"
 
         - team: "sysops"
           role: "admin"
-          job_template: "sysops-linux-baseline"
+          job_template: "sysops-linux: baseline"
 
         - team: "sysops"
           role: "admin"
-          job_template: "sysops-linux-update"
+          job_template: "sysops-linux: update"
 
         - team: "sysops"
           role: "admin"
-          job_template: "sysops-linux-service"
+          job_template: "sysops-linux: service"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux-webaas: apache"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux-dbaas: mariadb"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux-application: website"
+
 
 ###############################################
 ###### Job_templates - DEVOPS
