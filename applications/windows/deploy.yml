@@ -1,0 +1,8 @@
+---
+- name: "Deploy Instances"
+  hosts: windows
+  become: true
+
+  tasks:
+    - win_ping:
+    - setup:

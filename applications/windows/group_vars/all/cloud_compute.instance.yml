@@ -1,0 +1,14 @@
+cloud_compute:
+  instance:
+    windows-000:
+      name: windows-000
+      size: n1-standard-1
+      image: windows-2016
+      credential:
+        username: jdacosta
+        key: windows
+      network:
+        subnet: devops
+        public: yes
+      tags:
+        - windows

@@ -152,6 +152,24 @@ ansible_tower_config:
           role: "admin"
           credential: "network-ios-net"
 
+#### PANOS
+        - team: "secops"
+          role: "admin"
+          credential: "network-panos-ssh"
+
+        - team: "secops"
+          role: "admin"
+          credential: "network-panos-net"
+
+#### TMOS
+        - team: "secops"
+          role: "admin"
+          credential: "network-tmos-ssh"
+
+        - team: "secops"
+          role: "admin"
+          credential: "network-tmos-net"
+
 #### Linux
         - team: "secops"
           role: "admin"
@@ -265,6 +283,10 @@ ansible_tower_config:
 ########################
         - team: "netops"
           role: "admin"
+          job_template: "Dev: ios_robo"
+
+        - team: "netops"
+          role: "admin"
           job_template: "Dev: ios_facts"
 
         - team: "netops"
@@ -300,6 +322,34 @@ ansible_tower_config:
 ########################
         - team: "netops"
           role: "admin"
+          job_template: "Dev: bigip_dns"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_facts"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_hostname"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_ntp"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_selfip"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_vlan"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_vserver"
+
+        - team: "netops"
+          role: "admin"
           job_template: "1: f5-passwd"
 
         - team: "netops"
@@ -313,6 +363,29 @@ ansible_tower_config:
         - team: "netops"
           role: "admin"
           job_template: "4: f5-facts"
+
+########################
+###### Job_templates - PaloAlto
+########################
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_cloud"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_cloud_pod01"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_interface"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_nat"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_security_rule"
 
 ###############################################
 ###### Job_templates - SYSOPS

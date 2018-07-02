@@ -1,0 +1,15 @@
+- name: oVirt.engine-setup
+
+- src: https://github.com/victorock/ovirt-ansible-repositories.git
+  scm: git
+  name: oVirt.repositories
+
+- src: https://github.com/victorock/ansible-role-linux.git
+  scm: git
+  version: dev
+  name: victorock.linux
+
+- src: https://github.com/victorock/ansible-role-gce-config.git
+  scm: git
+  version: dev
+  name: victorock.gce_config

@@ -1,0 +1,19 @@
+cloud_compute:
+  instance:
+    ovirt:
+      name: ovirt
+      size: n1-standard-8
+      image: nested-rhel-7
+      boot:
+        size: 120
+        persistent: yes
+      credential:
+        username: jdacosta
+        key: ovirt-devops-victorock-io
+      network:
+        subnet: devops-victorock-io
+        public: ovirt-devops-victorock-io
+      storage:
+        data: ovirt-devops-victorock-io
+      tags:
+        - ovirt

@@ -1,0 +1,11 @@
+[all:children]
+gce
+gns3
+
+[gce]
+localhost
+
+[gns3:children]
+tag_gns3
+
+[tag_gns3]

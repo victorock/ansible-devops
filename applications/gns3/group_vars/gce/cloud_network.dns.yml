@@ -1,0 +1,7 @@
+cloud_network:
+  dns:
+    victorock-io:
+      name: victorock-io
+      public: gns3-devops-victorock-io
+      zone: victorock.io
+      record: gns3.devops.victorock.io

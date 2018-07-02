@@ -1,0 +1,7 @@
+- name: "Deploy Darkbulb for IOS"
+  hosts: darkbulb-ios
+  become: true
+
+  roles:
+    - role: victorock.darkbulb
+      autorun: yes

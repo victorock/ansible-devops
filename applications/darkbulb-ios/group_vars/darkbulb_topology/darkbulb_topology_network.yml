@@ -1,16 +1,35 @@
 darkbulb_topology_network:
   network:
-    '@ipv6':          'yes'
+    '@ipv6':            'yes'
     bridge:
-      '@delay':       '0'
-      '@stp':         'on'
+      '@delay':         '0'
+      '@stp':           'on'
     forward:
-      '@mode':        'nat'
+      '@mode':          nat
     ip:
-      '@address':     '192.168.10.1'
-      '@netmask':     '255.255.255.0'
+      '@address':       10.42.0.1
+      '@netmask':       255.255.255.0
       dhcp:
         range:
-          '@end':     '192.168.10.254'
-          '@start':   '192.168.10.1'
-    name:             'darkbulb'
+          '@end':       10.42.0.254
+          '@start':     10.42.0.1
+        host:
+          - '@mac':     52:54:00:b3:01:10
+            '@name':    spine01
+            '@ip':      10.42.0.11
+          - '@mac':     52:54:00:b3:01:20
+            '@name':    spine02
+            '@ip':      10.42.0.12
+          - '@mac':     52:54:00:b3:02:10
+            '@name':    leaf01
+            '@ip':      10.42.0.21
+          - '@mac':     52:54:00:b3:02:20
+            '@name':    leaf02
+            '@ip':      10.42.0.22
+          - '@mac':     52:54:00:b3:02:30
+            '@name':    leaf03
+            '@ip':      10.42.0.23
+          - '@mac':     52:54:00:b3:02:40
+            '@name':    leaf04
+            '@ip':      10.42.0.24
+    name:               darkbulb

@@ -1,0 +1,8 @@
+ovirt_engine_setup_version: '4.1'
+ovirt_engine_setup_organization: 'ovirt.devops.victorock.io'
+ovirt_engine_setup_admin_password: "ovirtadmin"
+ovirt_repositories_use_subscription_manager: true
+ovirt_repositories_force_register: true
+ovirt_repositories_rh_username: "{{ lookup('ENV', 'RHSM_USERNAME') }}"
+ovirt_repositories_rh_password: "{{ lookup('ENV', 'RHSM_PASSWORD') }}"
+ovirt_repositories_pool_ids: [ "8a85f989630f6517016310326edf2b0c", "8a85f9815bb07800015bb083f6850f58", "8a85f98b630f6510016342abe2af6f09" ]

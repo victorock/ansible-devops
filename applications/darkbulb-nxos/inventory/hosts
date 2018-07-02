@@ -11,9 +11,9 @@ tag_darkbulb
 
 [tag_darkbulb]
 [darkbulb_topology]
-leaf01
-leaf02
-leaf03
-leaf04
-spine01
-spine02
+leaf01-nxos
+leaf02-nxos
+leaf03-nxos
+leaf04-nxos
+spine01-nxos
+spine02-nxos

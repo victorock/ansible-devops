@@ -1,0 +1,8 @@
+
+- name: "Deploy oVirt"
+  hosts: ovirt
+  become: true
+
+  roles:
+    - oVirt.repositories
+    - oVirt.engine-setup

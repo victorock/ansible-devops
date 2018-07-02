@@ -1,9 +1,9 @@
 [all:children]
-gce_config
+gce
 darkbulb
 darkbulb_topology
 
-[gce_config]
+[gce]
 localhost
 
 [darkbulb:children]

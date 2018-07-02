@@ -1,0 +1,9 @@
+- name: "Deploy Darkbulb Topology"
+  hosts: darkbulb_topology
+  become: true
+  
+  tasks:
+    - name: "victorock.darkbulb-topology"
+      include_role:
+        name: "victorock.darkbulb-topology"
+        tasks_from: run

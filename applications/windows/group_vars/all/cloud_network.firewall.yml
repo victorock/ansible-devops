@@ -1,0 +1,24 @@
+cloud_network:
+  firewall:
+    windows:
+      name: windows
+      subnet: devops
+      rules:
+        - name: "windows-rdp-all"
+          src_cidr: 0.0.0.0/0
+          dst_port: 3389
+          proto: tcp
+
+        - name: "windows-winrm-all"
+          src_cidr: 0.0.0.0/0
+          dst_port: 5985
+          proto: tcp
+
+        - name: "windows-winrms-all"
+          src_cidr: 0.0.0.0/0
+          dst_port: 5986
+          proto: tcp
+
+        - name: "windows-icmp-all"
+          src_cidr: 0.0.0.0/0
+          proto: icmp

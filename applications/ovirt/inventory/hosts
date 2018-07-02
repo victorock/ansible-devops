@@ -1,0 +1,11 @@
+[all:children]
+gce_config
+ovirt
+
+[gce_config]
+localhost
+
+[ovirt:children]
+tag_ovirt
+
+[tag_ovirt]

@@ -1,0 +1,7 @@
+- name: "Deploy Darkbulb for NXOS"
+  hosts: darkbulb-nxos
+  become: true
+
+  roles:
+    - role: victorock.darkbulb
+      autorun: yes

@@ -120,7 +120,7 @@ ansible_tower_config:
           playbook: "cisco/nxos/applications/cloud/europe-central-fr1/main.yml"
           inventory: "netops"
           forks: 50
-          limit: "nxos"
+          limit: ""
           machine_credential: "empty-ssh"
 #          ask_limit_on_launch: true
           ask_credential: true
@@ -179,6 +179,17 @@ ansible_tower_config:
 ########################################################################
 #                           Netops - IOS                              #
 ########################################################################
+
+        - name: "Dev: ios_robo"
+          description: "Dev: ios_robo"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "cisco/ios/applications/robo/fr-paris01/main.yml"
+          inventory: "netops"
+          forks: 50
+          limit: ""
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
         - name: "Dev: ios_facts"
           description: "Dev: ios_facts"
           project: "Dev: victorock-ansible-netops"
@@ -267,9 +278,96 @@ ansible_tower_config:
 #                     Netops - F5                                      #
 ########################################################################
 
-########################################################################
-#                     Netops - F5 - f5_passwd                          #
-########################################################################
+        - name: "Dev: bigip_cloud"
+          description: "Dev: bigip_cloud"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "f5/tmos/applications/cloud/europe-central-fr1/main.yml"
+          inventory: "netops"
+          forks: 50
+          limit: ""
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: bigip_cloud_pod01"
+          description: "Dev: bigip_cloud_pod01"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "f5/tmos/applications/cloud/europe-central-fr1/pod01.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "pod01:&tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: bigip_dns"
+          description: "Dev: bigip_dns"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "f5/tmos/playbooks/dns.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: bigip_facts"
+          description: "Dev: bigip_facts"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "f5/tmos/playbooks/facts.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: bigip_hostname"
+          description: "Dev: bigip_hostname"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "f5/tmos/playbooks/hostname.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: bigip_ntp"
+          description: "Dev: bigip_ntp"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "f5/tmos/playbooks/ntp.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: bigip_selfip"
+          description: "Dev: bigip_selfip"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "f5/tmos/playbooks/selfip.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: bigip_vlan"
+          description: "Dev: bigip_vlan"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "f5/tmos/playbooks/vlan.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: bigip_vserver"
+          description: "Dev: bigip_vserver"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "f5/tmos/playbooks/vserver.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
         - name: "1: f5-passwd"
           description: "1: f5-passwd"
           project: "network-automation-an-demos"
@@ -280,9 +378,6 @@ ansible_tower_config:
           machine_credential: "empty-ssh"
           ask_credential: true
 
-########################################################################
-#                     Netops - F5 - f5_system                          #
-########################################################################
         - name: "2: f5-system"
           description: "2: f5-system"
           project: "network-automation-an-demos"
@@ -293,9 +388,6 @@ ansible_tower_config:
           machine_credential: "empty-ssh"
           ask_credential: true
 
-########################################################################
-#                     Netops - F5 - f5_vserver                          #
-########################################################################
         - name: "3: f5-vserver"
           description: "3: f5-vserver"
           project: "network-automation-an-demos"
@@ -306,9 +398,6 @@ ansible_tower_config:
           machine_credential: "empty-ssh"
           ask_credential: true
 
-########################################################################
-#                     Netops - F5 - f5_facts                          #
-########################################################################
         - name: "4: f5-facts"
           description: "4: f5-facts"
           project: "network-automation-an-demos"
@@ -316,6 +405,59 @@ ansible_tower_config:
           inventory: "netops"
           forks: 50
           limit: "tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+########################################################################
+#                           NetOps - Panos                           #
+########################################################################
+        - name: "Dev: panos_cloud"
+          description: "Dev: panos_cloud"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "paloalto/panos/applications/cloud/europe-central-fr1/main.yml"
+          inventory: "netops"
+          forks: 50
+          limit: ""
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: panos_cloud_pod01"
+          description: "Dev: panos_cloud_pod01"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "paloalto/panos/applications/cloud/europe-central-fr1/pod01.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "pod01:&tmos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: panos_interface"
+          description: "Dev: panos_interface"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "paloalto/panos/playbooks/interface.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "panos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: panos_nat"
+          description: "Dev: panos_nat"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "paloalto/panos/playbooks/nat.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "panos"
+          machine_credential: "empty-ssh"
+          ask_credential: true
+
+        - name: "Dev: panos_security_rule"
+          description: "Dev: panos_security_rule"
+          project: "Dev: victorock-ansible-netops"
+          playbook: "paloalto/panos/playbooks/security_rule.yml"
+          inventory: "netops"
+          forks: 50
+          limit: "panos"
           machine_credential: "empty-ssh"
           ask_credential: true
 
