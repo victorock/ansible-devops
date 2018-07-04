@@ -1,11 +1,11 @@
 [all:children]
 gce
-ansible-tower
+tower
 
 [gce]
 localhost
 
-[ansible-tower:children]
+[tower:children]
 tag_ansible-tower
 
 [tag_ansible-tower]

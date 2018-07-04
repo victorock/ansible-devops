@@ -1,5 +1,5 @@
 ---
-ansible_tower_config:
+tower_config:
   host: "ansible-tower.devops.victorock.io"
   username: "admin"
   password: "toweradmin"

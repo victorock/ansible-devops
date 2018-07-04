@@ -1,5 +1,5 @@
 ---
-ansible_tower_config:
+tower_config:
   ldap_auth:
     uri: "ldaps://freeipa.devops.victorock.io"
     bind_dn: "cn=tower,cn=users,cn=accounts,dc=ipa,dc=victorock,dc=io"

@@ -14,22 +14,19 @@
 
 - name: victorock.security
 
-- src: https://github.com/victorock/ansible-role-download.git
-  scm: git
-  version: dev
-  name: victorock.download
+- name: victorock.download
 
 - src: https://github.com/victorock/ansible-role-libvirt.git
   scm: git
   version: dev
   name: victorock.libvirt
 
-- src: https://github.com/victorock/ansible-role-gns3-server.git
+- src: https://github.com/victorock/gns3_server.git
   scm: git
   version: dev
   name: victorock.gns3_server
 
-- src: https://github.com/victorock/ansible-role-cockpit.git
+- src: https://github.com/victorock/cockpit.git
   scm: git
   version: dev
   name: victorock.cockpit
@@ -69,22 +66,22 @@
   version: dev
   name: victorock.ipaserver
 
-- src: https://github.com/victorock/ansible-role-ansible-tower.git
+- src: https://github.com/victorock/ansible-role-tower.git
   scm: git
   version: dev
-  name: victorock.ansible-tower
+  name: victorock.tower
 
-- src: https://github.com/victorock/ansible-role-ansible-tower-setup.git
+- src: https://github.com/victorock/ansible-role-tower-setup.git
   scm: git
   version: dev
-  name: victorock.ansible-tower-setup
+  name: victorock.tower_setup
 
-- src: https://github.com/victorock/ansible-role-ansible-tower-facts.git
+- src: https://github.com/victorock/ansible-role-tower-facts.git
   scm: git
   version: dev
-  name: victorock.ansible-tower-facts
+  name: victorock.tower_facts
 
-- src: https://github.com/victorock/ansible-role-ansible-tower-config.git
+- src: https://github.com/victorock/ansible-role-tower-config.git
   scm: git
   version: dev
-  name: victorock.ansible-tower-config
+  name: victorock.tower_config

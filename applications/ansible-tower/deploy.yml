@@ -1,27 +1,22 @@
 - name: "Deploy: Ansible Tower Config"
-  hosts: ansible-tower
+  hosts: tower
   gather_facts: yes
   become: yes
 
-  tasks:
-    - block:
-        - name: "Copy Vault to Server"
-          copy:
-            src: "vault"
-            dest: "~/.ansible/"
+  vars:
+    autorun: true
 
-        - name: "victorock.linux"
-          include_role:
-            name: "victorock.linux"
-          vars:
-            autorun: true
 
-        - name: "victorock.ansible-tower"
-          include_role:
-            name: "victorock.ansible-tower"
+  roles:
+    - role: "victorock.download"
+      download: "gs"
+      download_user: "{{ lookup('ENV', 'GS_ACCESS_KEY_ID') }}"
+      download_pass: "{{ lookup('ENV', 'GS_SECRET_ACCESS_KEY') }}"
+      download_file: "tower_license.txt"
+      download_from: "/input/{{ download_file }}"
+      download_from_bucket: "darkbulb-image-store"
+      download_from_region: "europe-west1"
+      download_to: "~/.ansible/tmp/{{ download_file }}"
 
-      rescue:
-        - name: "Clean Vault in Server"
-          file:
-            path: "~/.ansible/vault"
-            state: absent
+    - role: "victorock.linux"
+    - role: "victorock.tower"

@@ -1,5 +1,5 @@
 ---
-ansible_tower_config:
+tower_config:
   organization:
     DEMO:
       projects:
