@@ -1,4 +1,0 @@
-cloud_network:
-  public:
-    gns3-devops-victorock-io:
-      name: gns3-devops-victorock-io

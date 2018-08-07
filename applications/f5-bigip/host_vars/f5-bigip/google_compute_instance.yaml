@@ -1,0 +1,34 @@
+gcp_compute_instance:
+  name: "{{ inventory_hostname }}"
+  can_ip_forward: false
+  disks:
+    - auto_delete: true
+      boot: true
+      device_name: boot
+      initialize_params:
+        disk_size_gb: 82
+        disk_type: pd-standard
+        source_image: https://www.googleapis.com/compute/v1/projects/f5-7626-networks-public/global/images/f5-byol-bigip-13-1-0-2-0-6-best
+      type: PERSISTENT
+  machine_type: n1-standard-4
+  metadata: {}
+  network_interfaces:
+    - name: default
+      access_configs:
+        - name: "External NAT"
+          type: ONE_TO_ONE_NAT
+  project: "{{ cloud_provider.project }}"
+  scopes:
+    - https://www.googleapis.com/auth/compute
+  service_accounts:
+    - email: default
+      scopes:
+      - https://www.googleapis.com/auth/cloud.useraccounts.readonly
+      - https://www.googleapis.com/auth/devstorage.read_only
+      - https://www.googleapis.com/auth/logging.write
+      - https://www.googleapis.com/auth/monitoring.write
+  state: present
+  tags:
+    - items:
+        - tmos
+  zone: "{{ cloud_provider.zone }}"

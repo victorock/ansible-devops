@@ -1,0 +1,8 @@
+download: "gs"
+download_file: "nxosv-7.qcow2"
+download_user: "{{ lookup('ENV', 'GS_ACCESS_KEY_ID') }}"
+download_pass: "{{ lookup('ENV', 'GS_SECRET_ACCESS_KEY') }}"
+download_from: "/output/{{ download_file }}"
+download_from_bucket: "darkbulb-image-store"
+download_from_region: "europe-west1"
+download_to: "/var/lib/libvirt/images/{{ download_file }}"

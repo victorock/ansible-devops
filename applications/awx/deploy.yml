@@ -10,15 +10,6 @@
         name: victorock.linux
         tasks_from: run
 
-    - name: "victorock.security"
-      include_role:
-        name: victorock.security
-
     - name: "geerlingguy.awx"
       include_role:
         name: geerlingguy.awx
-
-    - name: "victorock.rkhunter"
-      include_role:
-        name: victorock.rkhunter
-        tasks_from: run

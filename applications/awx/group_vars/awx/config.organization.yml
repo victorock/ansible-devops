@@ -1,0 +1,6 @@
+---
+tower_config:
+  organization:
+    DEMO:
+      name: "DEMO"
+      description: "DEMO"

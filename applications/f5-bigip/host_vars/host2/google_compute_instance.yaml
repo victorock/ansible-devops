@@ -1,0 +1,34 @@
+gcp_compute_instance:
+  name: "{{ inventory_hostname }}"
+  can_ip_forward: false
+  disks:
+    - auto_delete: true
+      boot: true
+      device_name: boot
+      initialize_params:
+        disk_size_gb: 20
+        disk_type: pd-standard
+        source_image: https://www.googleapis.com/compute/v1/projects/darkbulb-lab/global/images/nested-rhel-7
+      type: PERSISTENT
+  machine_type: n1-standard-1
+  metadata: {}
+  network_interfaces:
+    - name: default
+      access_configs:
+        - name: "External NAT"
+          type: ONE_TO_ONE_NAT
+  project: "{{ cloud_provider.project }}"
+  scopes:
+    - https://www.googleapis.com/auth/compute
+  service_accounts:
+    - email: default
+      scopes:
+      - https://www.googleapis.com/auth/cloud.useraccounts.readonly
+      - https://www.googleapis.com/auth/devstorage.read_only
+      - https://www.googleapis.com/auth/logging.write
+      - https://www.googleapis.com/auth/monitoring.write
+  state: present
+  tags:
+    - items:
+        - app_hosts
+  zone: "{{ cloud_provider.zone }}"

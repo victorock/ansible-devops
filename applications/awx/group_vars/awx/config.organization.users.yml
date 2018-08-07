@@ -1,0 +1,52 @@
+---
+tower_config:
+  organization:
+    DEMO:
+      users:
+        - name: "infraops"
+          password: "infraops"
+          email: "infraops@acme.com"
+          first_name: "Infrastructure"
+          last_name: "Operations"
+          superuser: true
+          auditor: false
+
+        - name: "netops"
+          password: "netops"
+          email: "netops@acme.com"
+          first_name: "Network"
+          last_name: "Operations"
+          superuser: false
+          auditor: false
+
+        - name: "devops"
+          password: "devops"
+          email: "devops@acme.com"
+          first_name: "Developer"
+          last_name: "Operations"
+          superuser: false
+          auditor: false
+
+        - name: "sysops"
+          password: "sysops"
+          email: "sysops@acme.com"
+          first_name: "System"
+          last_name: "Operations"
+          superuser: false
+          auditor: false
+
+        - name: "appops"
+          password: "appops"
+          email: "appops@acme.com"
+          first_name: "Application"
+          last_name: "Operations"
+          superuser: false
+          auditor: false
+
+        - name: "secops"
+          password: "secops"
+          email: "secops@acme.com"
+          first_name: "Security"
+          last_name: "Operations"
+          superuser: false
+          auditor: true

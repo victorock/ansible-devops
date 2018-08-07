@@ -16,9 +16,9 @@
 
 - name: victorock.download
 
-- src: https://github.com/victorock/ansible-role-libvirt.git
+- src: https://github.com/victorock/libvirt.git
   scm: git
-  version: dev
+  version: master
   name: victorock.libvirt
 
 - src: https://github.com/victorock/gns3_server.git

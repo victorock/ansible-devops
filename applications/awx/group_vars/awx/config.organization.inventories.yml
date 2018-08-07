@@ -1,0 +1,19 @@
+---
+tower_config:
+  organization:
+    DEMO:
+      inventories:
+        - name: "infraops"
+          description: "infraops"
+
+        - name: "netops"
+          description: "netops"
+
+        - name: "sysops"
+          description: "sysops"
+
+        - name: "devops"
+          description: "devops"
+
+        - name: "secops"
+          description: "secops"

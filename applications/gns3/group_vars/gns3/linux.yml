@@ -1,1 +1,19 @@
 linux_update: yes
+linux_rhsm: yes
+linux_rhsm_autosubscribe: no
+linux_rhsm_username: "{{ lookup('ENV', 'RHSM_USERNAME') }}"
+linux_rhsm_password: "{{ lookup('ENV', 'RHSM_PASSWORD') }}"
+linux_rhsm_pools:
+  - 8a85f9815bb07800015bb083f6850f58
+  - 8a85f98460bfb0470160c2ff22f13e47
+  - 8a85f98c63842fef0163b7f2334651af
+
+linux_additional_rhsm_repos:
+  - name: rhel-7-server-htb-rpms
+    state: absent
+  - name: rhel-7-server-rhevh-rpms
+  - name: rhel-7-server-rpms
+  - name: rhel-7-server-extras-rpms
+  - name: rhel-7-server-rh-common-rpms
+  - name: rhel-7-server-optional-rpms
+  - name: rhel-7-server-openstack-beta-rpms

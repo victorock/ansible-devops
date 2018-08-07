@@ -117,7 +117,7 @@ tower_config:
         - name: "Dev: nxos_cloud"
           description: "Dev: nxos_cloud"
           project: "Dev: victorock-ansible-netops"
-          playbook: "cisco/nxos/applications/cloud/europe-central-fr1/main.yml"
+          playbook: "cisco/nxos/applications/cloud/eu-central-fr1/main.yml"
           inventory: "netops"
           forks: 50
           limit: ""
@@ -128,7 +128,7 @@ tower_config:
         - name: "Dev: nxos_cloud_pod01"
           description: "Dev: nxos_cloud_pod01"
           project: "Dev: victorock-ansible-netops"
-          playbook: "cisco/nxos/applications/cloud/europe-central-fr1/pod01.yml"
+          playbook: "cisco/nxos/applications/cloud/eu-central-fr1/cloud_pod01.yml"
           inventory: "netops"
           forks: 50
           limit: "nxos:&pod01"
@@ -138,7 +138,7 @@ tower_config:
         - name: "Dev: nxos_cloud_pod02"
           description: "Dev: nxos_cloud_pod02"
           project: "Dev: victorock-ansible-netops"
-          playbook: "cisco/nxos/applications/cloud/europe-central-fr1/pod02.yml"
+          playbook: "cisco/nxos/applications/cloud/eu-central-fr1/cloud_pod02.yml"
           inventory: "netops"
           forks: 50
           limit: "nxos:&pod01"
@@ -148,7 +148,7 @@ tower_config:
         - name: "Dev: nxos_fabric"
           description: "Dev: nxos_fabric"
           project: "Dev: victorock-ansible-netops"
-          playbook: "cisco/nxos/applications/fabric/europe-central-fr1/main.yml"
+          playbook: "cisco/nxos/applications/fabric/eu-central-fr1/main.yml"
           inventory: "netops"
           forks: 50
           limit: "nxos"
@@ -159,7 +159,7 @@ tower_config:
         - name: "Dev: nxos_fabric_spine"
           description: "Dev: nxos_fabric_spine"
           project: "Dev: victorock-ansible-netops"
-          playbook: "cisco/nxos/applications/fabric/europe-central-fr1/spine.yml"
+          playbook: "cisco/nxos/applications/fabric/eu-central-fr1/spine.yml"
           inventory: "netops"
           forks: 50
           limit: "nxos:&spine"
@@ -169,7 +169,7 @@ tower_config:
         - name: "Dev: nxos_fabric_leaf"
           description: "Dev: nxos_fabric_leaf"
           project: "Dev: victorock-ansible-netops"
-          playbook: "cisco/nxos/applications/fabric/europe-central-fr1/leaf.yml"
+          playbook: "cisco/nxos/applications/fabric/eu-central-fr1/leaf.yml"
           inventory: "netops"
           forks: 50
           limit: "nxos:&leaf"
@@ -281,7 +281,7 @@ tower_config:
         - name: "Dev: bigip_cloud"
           description: "Dev: bigip_cloud"
           project: "Dev: victorock-ansible-netops"
-          playbook: "f5/tmos/applications/cloud/europe-central-fr1/main.yml"
+          playbook: "f5/tmos/applications/cloud/eu-central-fr1/main.yml"
           inventory: "netops"
           forks: 50
           limit: ""
@@ -291,7 +291,7 @@ tower_config:
         - name: "Dev: bigip_cloud_pod01"
           description: "Dev: bigip_cloud_pod01"
           project: "Dev: victorock-ansible-netops"
-          playbook: "f5/tmos/applications/cloud/europe-central-fr1/pod01.yml"
+          playbook: "f5/tmos/applications/cloud/eu-central-fr1/cloud_pod01.yml"
           inventory: "netops"
           forks: 50
           limit: "pod01:&tmos"
@@ -414,7 +414,7 @@ tower_config:
         - name: "Dev: panos_cloud"
           description: "Dev: panos_cloud"
           project: "Dev: victorock-ansible-netops"
-          playbook: "paloalto/panos/applications/cloud/europe-central-fr1/main.yml"
+          playbook: "paloalto/panos/applications/cloud/eu-central-fr1/main.yml"
           inventory: "netops"
           forks: 50
           limit: ""
@@ -424,7 +424,7 @@ tower_config:
         - name: "Dev: panos_cloud_pod01"
           description: "Dev: panos_cloud_pod01"
           project: "Dev: victorock-ansible-netops"
-          playbook: "paloalto/panos/applications/cloud/europe-central-fr1/pod01.yml"
+          playbook: "paloalto/panos/applications/cloud/eu-central-fr1/cloud_pod01.yml"
           inventory: "netops"
           forks: 50
           limit: "pod01:&tmos"

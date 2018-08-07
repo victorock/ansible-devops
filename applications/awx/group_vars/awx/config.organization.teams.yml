@@ -1,0 +1,37 @@
+---
+tower_config:
+  organization:
+    DEMO:
+      teams:
+        - name: "infraops"
+          description: "Infrastructure Operations"
+          members:
+            - name: "netops"
+            - name: "devops"
+            - name: "sysops"
+            - name: "secops"
+
+        - name: "netops"
+          description: "Network Operations"
+          members:
+            - name: "netops"
+
+        - name: "devops"
+          description: "Developer Operations"
+          members:
+            - name: "devops"
+
+        - name: "sysops"
+          description: "System Operations"
+          members:
+            - name: "sysops"
+
+        - name: "secops"
+          description: "Security Operations"
+          members:
+            - name: "secops"
+
+        - name: "appops"
+          description: "Application Operations"
+          members:
+            - name: "appops"

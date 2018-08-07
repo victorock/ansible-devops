@@ -3,7 +3,8 @@ gce
 gns3
 
 [gce]
-localhost
+gns3master
+gns3node01
 
 [gns3:children]
 tag_gns3

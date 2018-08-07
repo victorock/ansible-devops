@@ -1,8 +1,8 @@
 [all:children]
-gce_config
+gce
 awx
 
-[gce_config]
+[gce]
 localhost
 
 [awx:children]

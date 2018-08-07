@@ -1,0 +1,26 @@
+all:
+  hosts:
+    localhost:
+    f5-bigip:
+    host1:
+    host2:
+
+  children:
+    gce:
+      hosts:
+        f5-bigip:
+        host1:
+        host2:
+
+    app_hosts:
+      children:
+        tag_app_hosts:
+          hosts:
+            host1:
+            host2:
+
+    tmos:
+      children:
+        tag_tmos:
+          hosts:
+            f5-bigip:

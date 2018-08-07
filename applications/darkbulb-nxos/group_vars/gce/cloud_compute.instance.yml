@@ -3,7 +3,7 @@ cloud_compute:
     darkbulb-nxos:
       name: darkbulb-nxos
       size: n1-standard-16
-      image: nested-centos-7
+      image: nested-rhel-7
       boot:
         size: 60
         persistent: yes

@@ -1,0 +1,88 @@
+---
+tower_config:
+  organization:
+    DEMO:
+      projects:
+########################################################################
+#                  victorock-ansible-netops                            #
+########################################################################
+        - name: "Dev: victorock-ansible-netops"
+          description: "Dev: victorock-ansible-netops"
+          scm_credential: "empty-scm"
+          scm_type: "git"
+          scm_branch: "dev"
+          scm_clean: true
+          scm_update_on_launch: false
+          scm_url: "https://github.com/victorock/ansible-netops"
+
+########################################################################
+#                  victorock-ansible-devops                            #
+########################################################################
+        - name: "Dev: victorock-ansible-devops"
+          description: "Dev: victorock-ansible-devops"
+          scm_credential: "empty-scm"
+          scm_type: "git"
+          scm_branch: "dev"
+          scm_clean: true
+          scm_update_on_launch: false
+          scm_url: "https://github.com/victorock/ansible-devops"
+
+########################################################################
+#                  victorock-ansible-sysops                            #
+########################################################################
+        - name: "Dev: victorock-ansible-sysops"
+          description: "Dev: victorock-ansible-sysops"
+          scm_credential: "empty-scm"
+          scm_type: "git"
+          scm_branch: "dev"
+          scm_clean: true
+          scm_update_on_launch: false
+          scm_url: "https://github.com/victorock/ansible-sysops"
+
+########################################################################
+#                  victorock-ansible-secops                            #
+########################################################################
+        - name: "Dev: victorock-ansible-secops"
+          description: "Dev: victorock-ansible-secops"
+          scm_credential: "empty-scm"
+          scm_type: "git"
+          scm_branch: "dev"
+          scm_clean: true
+          scm_update_on_launch: false
+          scm_url: "https://github.com/victorock/ansible-secops"
+
+########################################################################
+#                  network-automation-linklight                        #
+########################################################################
+        - name: "network-automation-linklight"
+          description: "network-automation-linklight"
+          scm_credential: "empty-scm"
+          scm_type: "git"
+          scm_branch: "master"
+          scm_clean: true
+          scm_update_on_launch: false
+          scm_url: "https://github.com/network-automation/linklight"
+
+########################################################################
+#                  network-automation-an-demos                         #
+########################################################################
+        - name: "network-automation-an-demos"
+          description: "network-automation-an-demos"
+          scm_credential: "empty-scm"
+          scm_type: "git"
+          scm_branch: "master"
+          scm_clean: true
+          scm_update_on_launch: false
+          scm_url: "https://github.com/network-automation/an-demos"
+
+########################################################################
+#                  ansible-lightbulb                                   #
+########################################################################
+        - name: "ansible-lightbulb"
+          description: "ansible-lightbulb"
+          scm_credential: "empty-scm"
+          scm_type: "git"
+          scm_branch: "master"
+          scm_clean: true
+          scm_update_on_launch: false
+          scm_url: "https://github.com/ansible/lightbulb"

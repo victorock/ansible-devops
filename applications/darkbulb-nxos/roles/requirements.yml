@@ -1,14 +1,17 @@
+- name: victorock.download
+- name: victorock.libvirt
+- name: victorock.cockpit
+- name: victorock.linux
+  src: https://github.com/victorock/ansible-role-linux
+  version: dev
+  scm: git
+- name: geerlingguy.repo-epel
+- name: victorock.gce_config
 - src: https://github.com/victorock/ansible-role-darkbulb.git
   scm: git
   version: dev
   name: victorock.darkbulb
-
 - src: https://github.com/victorock/ansible-role-darkbulb-topology.git
   scm: git
   version: dev
-  name: victorock.darkbulb-topology
-
-- src: https://github.com/victorock/ansible-role-gce-config.git
-  scm: git
-  version: dev
-  name: victorock.gce_config
+  name: victorock.darkbulb_topology

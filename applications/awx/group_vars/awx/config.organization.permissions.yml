@@ -1,0 +1,467 @@
+---
+tower_config:
+  organization:
+    DEMO:
+      permissions:
+
+########################
+###### Teams
+########################
+
+        - team: "infraops"
+          role: "admin"
+          target_team: "infraops"
+
+        - team: "netops"
+          role: "admin"
+          target_team: "netops"
+
+        - team: "sysops"
+          role: "admin"
+          target_team: "sysops"
+
+        - team: "devops"
+          role: "admin"
+          target_team: "devops"
+
+        - team: "secops"
+          role: "admin"
+          target_team: "secops"
+
+########################
+###### Inventories
+########################
+
+        - team: "infraops"
+          role: "admin"
+          inventory: "infraops"
+
+        - team: "netops"
+          role: "admin"
+          inventory: "netops"
+
+        - team: "netops"
+          role: "update"
+          inventory: "netops"
+
+        - team: "sysops"
+          role: "admin"
+          inventory: "sysops"
+
+        - team: "sysops"
+          role: "update"
+          inventory: "sysops"
+
+        - team: "devops"
+          role: "admin"
+          inventory: "devops"
+
+        - team: "devops"
+          role: "update"
+          inventory: "devops"
+
+        - team: "secops"
+          role: "admin"
+          inventory: "secops"
+
+        - team: "secops"
+          role: "update"
+          inventory: "secops"
+
+
+########################
+###### Credentials
+########################
+
+        - team: "secops"
+          role: "admin"
+          credential: "empty-scm"
+
+        - team: "netops"
+          role: "use"
+          credential: "empty-scm"
+
+        - team: "devops"
+          role: "use"
+          credential: "empty-scm"
+
+        - team: "sysops"
+          role: "use"
+          credential: "empty-scm"
+
+        - team: "secops"
+          role: "admin"
+          credential: "empty-ssh"
+
+        - team: "netops"
+          role: "use"
+          credential: "empty-ssh"
+
+        - team: "devops"
+          role: "use"
+          credential: "empty-ssh"
+
+        - team: "sysops"
+          role: "use"
+          credential: "empty-ssh"
+
+#### CLOUD
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-amazon-ec2"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-google-gce"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-microsoft-azure"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-openstack-xyz"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-vmware-xyz"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-cloudforms-xyz"
+
+        - team: "secops"
+          role: "admin"
+          credential: "cloud-tower-xyz"
+
+#### NXOS
+        - team: "secops"
+          role: "admin"
+          credential: "network-nxos-ssh"
+
+        - team: "secops"
+          role: "admin"
+          credential: "network-nxos-net"
+
+#### IOS
+        - team: "secops"
+          role: "admin"
+          credential: "network-ios-ssh"
+
+        - team: "secops"
+          role: "admin"
+          credential: "network-ios-net"
+
+#### PANOS
+        - team: "secops"
+          role: "admin"
+          credential: "network-panos-ssh"
+
+        - team: "secops"
+          role: "admin"
+          credential: "network-panos-net"
+
+#### TMOS
+        - team: "secops"
+          role: "admin"
+          credential: "network-tmos-ssh"
+
+        - team: "secops"
+          role: "admin"
+          credential: "network-tmos-net"
+
+#### Linux
+        - team: "secops"
+          role: "admin"
+          credential: "system-linux-ssh"
+
+#### Windows
+        - team: "secops"
+          role: "admin"
+          credential: "system-windows-winrm"
+
+########################
+###### Projects
+########################
+        - team: "netops"
+          role: "admin"
+          project: "Dev: victorock-ansible-netops"
+
+        - team: "netops"
+          role: "admin"
+          project: "network-automation-linklight"
+
+        - team: "netops"
+          role: "admin"
+          project: "network-automation-an-demos"
+
+        - team: "devops"
+          role: "admin"
+          project: "Dev: victorock-ansible-devops"
+
+        - team: "secops"
+          role: "admin"
+          project: "Dev: victorock-ansible-secops"
+
+        - team: "sysops"
+          role: "admin"
+          project: "Dev: victorock-ansible-sysops"
+
+        - team: "sysops"
+          role: "admin"
+          project: "ansible-lightbulb"
+
+########################
+###### Job_templates - NXOS
+########################
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_facts"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_banner"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_feature"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_vlan"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_switchport"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_running_config"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_tech_support"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_spanning_tree"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_arp"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_version"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_cloud"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_cloud_pod01"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_cloud_pod02"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_fabric"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_fabric_spine"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: nxos_fabric_leaf"
+
+########################
+###### Job_templates - IOS
+########################
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: ios_robo"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: ios_facts"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: ios_banner"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: ios_vlan"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: ios_running_config"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: ios_tech_support"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: ios_spanning_tree"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: ios_arp"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: ios_version"
+
+########################
+###### Job_templates - F5
+########################
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_dns"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_facts"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_hostname"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_ntp"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_selfip"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_vlan"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: bigip_vserver"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "1: f5-passwd"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "2: f5-system"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "3: f5-vserver"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "4: f5-facts"
+
+########################
+###### Job_templates - PaloAlto
+########################
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_cloud"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_cloud_pod01"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_interface"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_nat"
+
+        - team: "netops"
+          role: "admin"
+          job_template: "Dev: panos_security_rule"
+
+###############################################
+###### Job_templates - SYSOPS
+###############################################
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-google-gce: instance"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-amazon-aws: instance"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-openstack-nova: instance"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-vmware-vcenter: instance"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux: baseline"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux: update"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux: service"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux-webaas: apache"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux-dbaas: mariadb"
+
+        - team: "sysops"
+          role: "admin"
+          job_template: "sysops-linux-application: website"
+
+
+###############################################
+###### Job_templates - DEVOPS
+###############################################
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-freeipa"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-ansible-tower"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-gitlab"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-jenkins"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-darkbulb-ios"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-darkbulb-nxos"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-darkbulb-eos"
+
+        - team: "devops"
+          role: "admin"
+          job_template: "devops-application-darkbulb-junos"

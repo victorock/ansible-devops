@@ -1,0 +1,7 @@
+---
+tower_config:
+  host: "awx.devops.victorock.io"
+  username: "admin"
+  password: "toweradmin"
+  verify_ssl: false
+  format: json

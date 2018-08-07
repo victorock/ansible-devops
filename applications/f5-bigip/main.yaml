@@ -1,0 +1,22 @@
+- name: "Google Compute Platform"
+  hosts: gce
+  connection: local
+  gather_facts: no
+  tasks:
+
+    - name: create instance
+      gcp_compute_instance:
+        auth_kind: "{{ gcp_compute_instance.auth_kind | default('serviceaccount') }}"
+        can_ip_forward: "{{ gcp_compute_instance.can_ip_forward | default(omit) }}"
+        disks: "{{ gcp_compute_instance.disks }}"
+        machine_type: "{{ gcp_compute_instance.machine_type }}"
+        metadata: "{{ gcp_compute_instance.metadata }}"
+        name: "{{ gcp_compute_instance.name }}"
+        network_interfaces: "{{ gcp_compute_instance.network_interfaces }}"
+        project: "{{ cloud_provider.project }}"
+        service_accounts: "{{ gcp_compute_instance.service_accounts }}"
+        service_account_file: "{{ lookup('ENV', 'GCE_CREDENTIALS_FILE_PATH') }}"
+        scopes: "{{ gcp_compute_instance.scopes }}"
+        state: "{{ gcp_compute_instance.state }}"
+        zone: "{{ cloud_provider.zone }}"
+      when: gcp_compute_instance is defined

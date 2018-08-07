@@ -1,6 +1,0 @@
-cloud_provider:
-  provider: "gce"
-  region: "europe-west1"
-  zone: "europe-west1-d"
-  project: "darkbulb-lab"
-  cidr: "10.1.0.0/16"

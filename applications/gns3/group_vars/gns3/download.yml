@@ -1,0 +1,9 @@
+download: "gs"
+download_user: "{{ lookup('ENV', 'GS_ACCESS_KEY_ID') }}"
+download_pass: "{{ lookup('ENV', 'GS_SECRET_ACCESS_KEY') }}"
+download_from_bucket: "darkbulb-image-store"
+download_from_region: "europe-west1"
+download_files:
+  - "vios_l2-adventerprisek9-m.03.2017.qcow2"
+  - "nxosv-final.7.0.3.I7.3.qcow2"
+  - "OVMF-20160813.fd"

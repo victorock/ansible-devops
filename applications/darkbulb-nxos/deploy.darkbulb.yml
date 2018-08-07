@@ -3,5 +3,14 @@
   become: true
 
   roles:
-    - role: victorock.darkbulb
-      autorun: yes
+    - role: "victorock.linux"
+      autorun: true
+
+    - role: "victorock.libvirt"
+      autorun: true
+
+    - role: "victorock.cockpit"
+      autorun: true
+
+    - role: "victorock.download"
+      autorun: true

@@ -12,43 +12,15 @@
     - role: victorock.cockpit
     - role: victorock.libvirt
     - role: victorock.gns3_server
-    - role: victorock.download
+
+  tasks:
+    - name: "victorock.download"
       become_user: "gns3"
-      download: "gs"
-      download_file: "nxosv-final.7.0.3.I7.3.qcow2"
-      download_user: "{{ lookup('ENV', 'GS_ACCESS_KEY_ID') }}"
-      download_pass: "{{ lookup('ENV', 'GS_SECRET_ACCESS_KEY') }}"
-      download_from: "/input/{{ download_file }}"
-      download_from_bucket: "darkbulb-image-store"
-      download_from_region: "europe-west1"
-      download_to: "/opt/gns3/images/{{ download_file }}"
-    - role: victorock.download
-      become_user: "gns3"
-      download: "gs"
-      download_file: "OVMF-20160813.fd"
-      download_user: "{{ lookup('ENV', 'GS_ACCESS_KEY_ID') }}"
-      download_pass: "{{ lookup('ENV', 'GS_SECRET_ACCESS_KEY') }}"
-      download_from: "/input/{{ download_file }}"
-      download_from_bucket: "darkbulb-image-store"
-      download_from_region: "europe-west1"
-      download_to: "/opt/gns3/images/{{ download_file }}"
-    - role: victorock.download
-      become_user: "gns3"
-      download: "gs"
-      download_file: "vEOS-4.18.1F.qcow2"
-      download_user: "{{ lookup('ENV', 'GS_ACCESS_KEY_ID') }}"
-      download_pass: "{{ lookup('ENV', 'GS_SECRET_ACCESS_KEY') }}"
-      download_from: "/input/{{ download_file }}"
-      download_from_bucket: "darkbulb-image-store"
-      download_from_region: "europe-west1"
-      download_to: "/opt/gns3/images/{{ download_file }}"
-    - role: victorock.download
-      become_user: "gns3"
-      download: "gs"
-      download_file: "vios_l2-adventerprisek9-m.03.2017.qcow2"
-      download_user: "{{ lookup('ENV', 'GS_ACCESS_KEY_ID') }}"
-      download_pass: "{{ lookup('ENV', 'GS_SECRET_ACCESS_KEY') }}"
-      download_from: "/input/{{ download_file }}"
-      download_from_bucket: "darkbulb-image-store"
-      download_from_region: "europe-west1"
-      download_to: "/opt/gns3/images/{{ download_file }}"
+      include_role:
+        name: victorock.download
+      vars:
+        download_from: "/input/{{ download_file }}"
+        download_to: "/opt/gns3/images/{{ download_file }}"
+      loop: "{{ download_files }}"
+      loop_control:
+        loop_var: download_file
